@@ -170,15 +170,15 @@ export function Footer(props: FooterProps) {
         links: [
           {
             text: t('footer.columns.about.links.aboutProject'),
-            href: 'https://docs.qingapi.pro/wiki/project-introduction/',
+            href: 'https://docs.newapi.pro/wiki/project-introduction/',
           },
           {
             text: t('footer.columns.about.links.contact'),
-            href: 'https://docs.qingapi.pro/support/community-interaction/',
+            href: 'https://docs.newapi.pro/support/community-interaction/',
           },
           {
             text: t('footer.columns.about.links.features'),
-            href: 'https://docs.qingapi.pro/wiki/features-introduction/',
+            href: 'https://docs.newapi.pro/wiki/features-introduction/',
           },
         ],
       },
@@ -187,15 +187,15 @@ export function Footer(props: FooterProps) {
         links: [
           {
             text: t('footer.columns.docs.links.quickStart'),
-            href: 'https://docs.qingapi.pro/getting-started/',
+            href: 'https://docs.newapi.pro/getting-started/',
           },
           {
             text: t('footer.columns.docs.links.installation'),
-            href: 'https://docs.qingapi.pro/installation/',
+            href: 'https://docs.newapi.pro/installation/',
           },
           {
             text: t('footer.columns.docs.links.apiDocs'),
-            href: 'https://docs.qingapi.pro/api/',
+            href: 'https://docs.newapi.pro/api/',
           },
         ],
       },
