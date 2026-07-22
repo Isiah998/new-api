@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/dto"
+	"github.com/QingFlow/qing-api/model"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 )

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/setting/system_setting"
 )
 
 type ssrfResolver interface {

@@ -1,13 +1,13 @@
 package relay
 
 import (
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/types"
+	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	"github.com/QingFlow/qing-api/types"
 )
 
-func newAPIErrorFromParamOverride(err error) *types.NewAPIError {
+func qingAPIErrorFromParamOverride(err error) *types.QingAPIError {
 	if fixedErr, ok := relaycommon.AsParamOverrideReturnError(err); ok {
-		return relaycommon.NewAPIErrorFromParamOverride(fixedErr)
+		return relaycommon.QingAPIErrorFromParamOverride(fixedErr)
 	}
 	return types.NewError(err, types.ErrorCodeChannelParamOverrideInvalid, types.ErrOptionWithSkipRetry())
 }

@@ -1,0 +1,40 @@
+FROM docker.m.daocloud.io/oven/bun:1 AS frontend-builder
+
+WORKDIR /build/web
+COPY web/package.json web/bun.lock ./
+RUN bun install --frozen-lockfile --registry https://registry.npmmirror.com
+COPY ./web ./
+COPY ./VERSION /build/VERSION
+RUN DISABLE_ESLINT_PLUGIN=true VITE_REACT_APP_VERSION=$(cat /build/VERSION) bun run build
+
+FROM docker.m.daocloud.io/golang:1.26.1-alpine AS backend-builder
+
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOPROXY=https://goproxy.cn,direct \
+    GOEXPERIMENT=greenteagc
+
+ARG TARGETOS
+ARG TARGETARCH
+ENV GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH:-amd64}
+
+WORKDIR /build
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+COPY --from=frontend-builder /build/web/dist ./web/dist
+RUN go build -ldflags "-s -w -X 'github.com/QingFlow/qing-api/common.Version=$(cat VERSION)'" -o qing-api
+
+FROM docker.m.daocloud.io/debian:bookworm-slim
+
+RUN sed -i 's|deb.debian.org|mirrors.aliyun.com|g; s|security.debian.org|mirrors.aliyun.com|g' /etc/apt/sources.list.d/debian.sources \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates tzdata libasan8 wget \
+    && rm -rf /var/lib/apt/lists/* \
+    && update-ca-certificates
+
+COPY --from=backend-builder /build/qing-api /
+COPY LICENSE NOTICE THIRD-PARTY-LICENSES.md /licenses/
+EXPOSE 3000
+WORKDIR /data
+ENTRYPOINT ["/qing-api"]

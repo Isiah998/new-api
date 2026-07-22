@@ -1,6 +1,6 @@
-# New API Electron Desktop App
+# Qing API Electron Desktop App
 
-This directory contains the Electron wrapper for New API, providing a native desktop application with system tray support for Windows, macOS, and Linux.
+This directory contains the Electron wrapper for Qing API, providing a native desktop application with system tray support for Windows, macOS, and Linux.
 
 ## Prerequisites
 
@@ -9,8 +9,8 @@ The Electron app requires the compiled Go binary to function. You have two optio
 
 **Option A: Use existing binary (without Go installed)**
 ```bash
-# If you have a pre-built binary (e.g., new-api-macos)
-cp ../new-api-macos ../new-api
+# If you have a pre-built binary (e.g., qing-api-macos)
+cp ../qing-api-macos ../qing-api
 ```
 
 **Option B: Build from source (requires Go)**
@@ -41,7 +41,7 @@ This will:
 - Use the Rsbuild frontend development server on port 5173
 - Open an Electron window with DevTools enabled
 - Create a system tray icon (menu bar on macOS)
-- Store database in `../data/new-api.db`
+- Store database in `../data/qing-api.db`
 
 ## Building for Production
 
@@ -74,8 +74,8 @@ const PORT = 3000; // Change to desired port
 ```
 
 ### Database Location
-- **Development**: `../data/new-api.db` (project directory)
+- **Development**: `../data/qing-api.db` (project directory)
 - **Production**:
-  - macOS: `~/Library/Application Support/New API/data/`
-  - Windows: `%APPDATA%/New API/data/`
-  - Linux: `~/.config/New API/data/`
+  - macOS: `~/Library/Application Support/Qing API/data/`
+  - Windows: `%APPDATA%/Qing API/data/`
+  - Linux: `~/.config/Qing API/data/`

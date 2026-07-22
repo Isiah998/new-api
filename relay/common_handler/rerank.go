@@ -4,19 +4,19 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/relay/channel/xinference"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/dto"
+	"github.com/QingFlow/qing-api/logger"
+	"github.com/QingFlow/qing-api/relay/channel/xinference"
+	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	"github.com/QingFlow/qing-api/service"
+	"github.com/QingFlow/qing-api/types"
 
 	"github.com/gin-gonic/gin"
 )
 
-func RerankHandler(c *gin.Context, info *relaycommon.RelayInfo, resp *http.Response) (*dto.Usage, *types.NewAPIError) {
+func RerankHandler(c *gin.Context, info *relaycommon.RelayInfo, resp *http.Response) (*dto.Usage, *types.QingAPIError) {
 	responseBody, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, types.NewOpenAIError(err, types.ErrorCodeReadResponseBodyFailed, http.StatusInternalServerError)

@@ -6,9 +6,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/dto"
 
 	"github.com/samber/lo"
 	"gorm.io/gorm"

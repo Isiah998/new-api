@@ -8,17 +8,17 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/claude"
-	"github.com/QuantumNous/new-api/relay/channel/gemini"
-	"github.com/QuantumNous/new-api/relay/channel/openai"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/service/relayconvert"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/dto"
+	"github.com/QingFlow/qing-api/relay/channel"
+	"github.com/QingFlow/qing-api/relay/channel/claude"
+	"github.com/QingFlow/qing-api/relay/channel/gemini"
+	"github.com/QingFlow/qing-api/relay/channel/openai"
+	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	relayconstant "github.com/QingFlow/qing-api/relay/constant"
+	"github.com/QingFlow/qing-api/service"
+	"github.com/QingFlow/qing-api/service/relayconvert"
+	"github.com/QingFlow/qing-api/types"
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
 )
@@ -284,7 +284,7 @@ func (a *Adaptor) DoRequest(c *gin.Context, info *relaycommon.RelayInfo, request
 	return channel.DoApiRequest(a, c, info, requestBody)
 }
 
-func (a *Adaptor) DoResponse(c *gin.Context, resp *http.Response, info *relaycommon.RelayInfo) (usage any, err *types.NewAPIError) {
+func (a *Adaptor) DoResponse(c *gin.Context, resp *http.Response, info *relaycommon.RelayInfo) (usage any, err *types.QingAPIError) {
 	if err := a.resolve(c, info); err != nil {
 		return nil, types.NewOpenAIError(err, types.ErrorCodeInvalidRequest, http.StatusBadRequest, types.ErrOptionWithSkipRetry())
 	}
@@ -328,7 +328,7 @@ func (a *Adaptor) GetChannelName() string {
 	return ChannelName
 }
 
-func (a *Adaptor) doNativeResponse(c *gin.Context, resp *http.Response, info *relaycommon.RelayInfo) (any, *types.NewAPIError) {
+func (a *Adaptor) doNativeResponse(c *gin.Context, resp *http.Response, info *relaycommon.RelayInfo) (any, *types.QingAPIError) {
 	switch info.RelayFormat {
 	case types.RelayFormatClaude:
 		return a.claudeAdaptor.DoResponse(c, resp, info)

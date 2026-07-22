@@ -9,12 +9,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/model"
+	"github.com/QingFlow/qing-api/service"
+	"github.com/QingFlow/qing-api/setting/operation_setting"
+	"github.com/QingFlow/qing-api/types"
 
 	"github.com/shopspring/decimal"
 

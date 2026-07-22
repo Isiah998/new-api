@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service/authz"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/model"
+	"github.com/QingFlow/qing-api/service/authz"
 
 	"github.com/gin-gonic/gin"
 	"github.com/glebarez/sqlite"

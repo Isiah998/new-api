@@ -10,9 +10,9 @@ import (
 	"golang.org/x/text/language"
 	"gopkg.in/yaml.v3"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/dto"
 )
 
 const (

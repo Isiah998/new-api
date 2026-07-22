@@ -7,12 +7,12 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/openai"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/dto"
+	"github.com/QingFlow/qing-api/relay/channel"
+	"github.com/QingFlow/qing-api/relay/channel/openai"
+	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	"github.com/QingFlow/qing-api/relay/constant"
+	"github.com/QingFlow/qing-api/types"
 
 	"github.com/gin-gonic/gin"
 )
@@ -103,7 +103,7 @@ func (a *Adaptor) ConvertImageRequest(c *gin.Context, info *relaycommon.RelayInf
 	return nil, errors.New("not implemented")
 }
 
-func (a *Adaptor) DoResponse(c *gin.Context, resp *http.Response, info *relaycommon.RelayInfo) (usage any, err *types.NewAPIError) {
+func (a *Adaptor) DoResponse(c *gin.Context, resp *http.Response, info *relaycommon.RelayInfo) (usage any, err *types.QingAPIError) {
 	switch info.RelayMode {
 	case constant.RelayModeEmbeddings:
 		fallthrough

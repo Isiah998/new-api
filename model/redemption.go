@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/logger"
 
 	"gorm.io/gorm"
 )

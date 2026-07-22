@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2023-2026 QuantumNous
+Copyright (C) 2023-2026 QingFlow
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -14,7 +14,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-For commercial licensing, please contact support@quantumnous.com
+For commercial licensing, please contact support@qingflow.com
 */
 import { CHANNEL_TYPES } from '../constants'
 
@@ -137,7 +137,7 @@ export const CHANNEL_TYPE_CONFIGS: Record<number, ChannelTypeConfig> = {
   58: {
     id: 58,
     name: CHANNEL_TYPES[58],
-    icon: 'newapi',
+    icon: 'qingapi',
     hints: {
       baseUrl: 'Fallback base URL',
       key: 'Used by route auth templates',

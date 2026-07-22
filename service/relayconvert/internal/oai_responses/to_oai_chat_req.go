@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/dto"
 )
 
 const (

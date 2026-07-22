@@ -4,7 +4,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/types"
 	"github.com/gin-gonic/gin"
 )
 

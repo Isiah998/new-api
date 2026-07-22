@@ -9,12 +9,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/dto"
+	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	relayconstant "github.com/QingFlow/qing-api/relay/constant"
+	"github.com/QingFlow/qing-api/types"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -48,10 +48,10 @@ func TestGeminiResponsesHandlerReturnsOpenAIResponsesJSON(t *testing.T) {
 	body, err := common.Marshal(payload)
 	require.NoError(t, err)
 
-	usage, newAPIError := GeminiResponsesHandler(c, info, &http.Response{
+	usage, qingAPIError := GeminiResponsesHandler(c, info, &http.Response{
 		Body: io.NopCloser(bytes.NewReader(body)),
 	})
-	require.Nil(t, newAPIError)
+	require.Nil(t, qingAPIError)
 	require.NotNil(t, usage)
 	assert.Equal(t, 2, usage.PromptTokens)
 	assert.Equal(t, 3, usage.CompletionTokens)
@@ -75,10 +75,10 @@ func TestGeminiResponsesHandlerClosesBodyOnReadError(t *testing.T) {
 	c.Set(common.RequestIdKey, "gemini-responses-read-error-test")
 
 	body := &failingReadCloser{}
-	usage, newAPIError := GeminiResponsesHandler(c, newGeminiResponsesRelayInfo(false), &http.Response{Body: body})
+	usage, qingAPIError := GeminiResponsesHandler(c, newGeminiResponsesRelayInfo(false), &http.Response{Body: body})
 
 	require.Nil(t, usage)
-	require.NotNil(t, newAPIError)
+	require.NotNil(t, qingAPIError)
 	assert.True(t, body.closed)
 }
 
@@ -141,10 +141,10 @@ func TestGeminiResponsesStreamHandlerReturnsOpenAIResponsesSSE(t *testing.T) {
 		"",
 	}, "\n")
 
-	usage, newAPIError := GeminiResponsesStreamHandler(c, info, &http.Response{
+	usage, qingAPIError := GeminiResponsesStreamHandler(c, info, &http.Response{
 		Body: io.NopCloser(strings.NewReader(streamBody)),
 	})
-	require.Nil(t, newAPIError)
+	require.Nil(t, qingAPIError)
 	require.NotNil(t, usage)
 	assert.Equal(t, 5, usage.TotalTokens)
 

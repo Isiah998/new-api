@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/dto"
+	"github.com/QingFlow/qing-api/types"
 )
 
 func GuessRelayFormatFromRequest(req any) (types.RelayFormat, bool) {

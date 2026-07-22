@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relaymedia "github.com/QuantumNous/new-api/service/relayconvert/internal/media"
-	relaymeta "github.com/QuantumNous/new-api/service/relayconvert/internal/meta"
-	sharedgemini "github.com/QuantumNous/new-api/service/relayconvert/internal/shared/gemini"
-	"github.com/QuantumNous/new-api/setting/model_setting"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/dto"
+	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	relaymedia "github.com/QingFlow/qing-api/service/relayconvert/internal/media"
+	relaymeta "github.com/QingFlow/qing-api/service/relayconvert/internal/meta"
+	sharedgemini "github.com/QingFlow/qing-api/service/relayconvert/internal/shared/gemini"
+	"github.com/QingFlow/qing-api/setting/model_setting"
 	"github.com/gin-gonic/gin"
 )
 

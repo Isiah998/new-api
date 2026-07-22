@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/middleware"
+	"github.com/QingFlow/qing-api/model"
+	"github.com/QingFlow/qing-api/service"
 
 	"github.com/gin-gonic/gin"
 )

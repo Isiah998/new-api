@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/dto"
+	"github.com/QingFlow/qing-api/types"
 )
 
 func openAIResponsesRequestFromAny(request any) (*dto.OpenAIResponsesRequest, error) {

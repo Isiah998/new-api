@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QingFlow/qing-api/service"
 	"github.com/gin-gonic/gin"
 )
 

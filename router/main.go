@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/middleware"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/middleware"
 
 	"github.com/gin-gonic/gin"
 )

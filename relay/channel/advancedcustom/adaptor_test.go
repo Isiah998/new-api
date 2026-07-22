@@ -8,14 +8,14 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/service/relayconvert"
-	"github.com/QuantumNous/new-api/setting/model_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/dto"
+	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	relayconstant "github.com/QingFlow/qing-api/relay/constant"
+	"github.com/QingFlow/qing-api/service/relayconvert"
+	"github.com/QingFlow/qing-api/setting/model_setting"
+	"github.com/QingFlow/qing-api/types"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -564,10 +564,10 @@ func TestAdaptorResponsesToGeminiUsesResponsesBridge(t *testing.T) {
 	body, err := common.Marshal(payload)
 	require.NoError(t, err)
 
-	usage, newAPIError := adaptor.DoResponse(c, &http.Response{
+	usage, qingAPIError := adaptor.DoResponse(c, &http.Response{
 		Body: io.NopCloser(bytes.NewReader(body)),
 	}, info)
-	require.Nil(t, newAPIError)
+	require.Nil(t, qingAPIError)
 	require.NotNil(t, usage)
 
 	got := recorder.Body.String()

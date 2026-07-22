@@ -3,13 +3,13 @@ package relayconvert
 import (
 	"testing"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	sharedgemini "github.com/QuantumNous/new-api/service/relayconvert/internal/shared/gemini"
-	"github.com/QuantumNous/new-api/setting/model_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/constant"
+	"github.com/QingFlow/qing-api/dto"
+	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	sharedgemini "github.com/QingFlow/qing-api/service/relayconvert/internal/shared/gemini"
+	"github.com/QingFlow/qing-api/setting/model_setting"
+	"github.com/QingFlow/qing-api/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2023-2026 QuantumNous
+Copyright (C) 2023-2026 QingFlow
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -14,7 +14,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-For commercial licensing, please contact support@quantumnous.com
+For commercial licensing, please contact support@qingflow.com
 */
 import fs from 'node:fs/promises'
 import path from 'node:path'
@@ -64,9 +64,8 @@ const BRAND_AND_LITERAL_KEYS = new Set([
   'Mistral',
   'MokaAI',
   'Moonshot',
-  'New API',
-  'New API &lt;noreply@example.com&gt;',
-  'NewAPI',
+  'Qing API',
+  'Qing API &lt;noreply@example.com&gt;',
   'OAuth Client Secret',
   'OhMyGPT',
   'Ollama',
@@ -77,7 +76,7 @@ const BRAND_AND_LITERAL_KEYS = new Set([
   'Pancake',
   'Passkey',
   'Perplexity',
-  'QuantumNous',
+  'QingFlow',
   'Quota:',
   'Replicate',
   'SiliconFlow',
@@ -107,9 +106,9 @@ const BRAND_AND_LITERAL_KEYS = new Set([
   '"default": "us-central1", "claude-3-5-sonnet-20240620": "europe-west1"',
   'edit_this',
   'footer.columns.related.links.midjourney',
-  'footer.columns.related.links.newApiKeyTool',
+  'footer.columns.related.links.qingApiKeyTool',
   'my-status',
-  'new-api-key-tool',
+  'qing-api-key-tool',
   'price_xxx',
   'whsec_xxx',
 ])
@@ -229,8 +228,9 @@ function isLikelyUntranslated({ locale, baseValue, value }) {
   if (locale === 'ru') return true
 
   // For fr/vi: still useful but noisier; keep it conservative.
-  if (locale === 'fr' || locale === 'vi')
+  if (locale === 'fr' || locale === 'vi') {
     return /\b(the|and|or|to|with|please)\b/i.test(s)
+  }
 
   return false
 }

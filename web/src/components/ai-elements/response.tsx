@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2023-2026 QuantumNous
+Copyright (C) 2023-2026 QingFlow
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -14,7 +14,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-For commercial licensing, please contact support@quantumnous.com
+For commercial licensing, please contact support@qingflow.com
 */
 'use client'
 
@@ -27,7 +27,7 @@ import { getMarkdownContent, parseResponseContent } from './response-content'
 import { renderChildren, renderFootnotes } from './response-renderer'
 import type { ResponseProps } from './response-types'
 
-const markdown = getMarkdown('new-api-response')
+const markdown = getMarkdown('qing-api-response')
 const MAX_PARSED_MARKDOWN_CHARS = 20_000
 
 export const Response = memo((props: ResponseProps) => {

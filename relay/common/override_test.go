@@ -6,11 +6,11 @@ import (
 	"reflect"
 	"testing"
 
-	common2 "github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	common2 "github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/types"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/setting/model_setting"
+	"github.com/QingFlow/qing-api/dto"
+	"github.com/QingFlow/qing-api/setting/model_setting"
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/require"
 )

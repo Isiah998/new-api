@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/logger"
 	"github.com/gin-gonic/gin"
 )
 

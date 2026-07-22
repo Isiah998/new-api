@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QingFlow/qing-api/constant"
 )
 
 type ChannelSettings struct {

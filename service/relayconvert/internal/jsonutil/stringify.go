@@ -3,7 +3,7 @@ package jsonutil
 import (
 	"fmt"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QingFlow/qing-api/common"
 )
 
 func ToJSONString(v interface{}) string {

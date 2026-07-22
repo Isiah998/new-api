@@ -5,7 +5,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QingFlow/qing-api/constant"
 	"github.com/andybalholm/brotli"
 	"github.com/gin-gonic/gin"
 )

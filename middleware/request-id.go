@@ -3,7 +3,7 @@ package middleware
 import (
 	"context"
 
-	"github.com/QuantumNous/new-api/common"
+	"github.com/QingFlow/qing-api/common"
 	"github.com/gin-gonic/gin"
 )
 

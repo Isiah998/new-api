@@ -3,9 +3,9 @@ package controller
 import (
 	"testing"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/setting"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
+	"github.com/QingFlow/qing-api/common"
+	"github.com/QingFlow/qing-api/setting"
+	"github.com/QingFlow/qing-api/setting/operation_setting"
 	"github.com/stretchr/testify/require"
 )
 
