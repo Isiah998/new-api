@@ -22,7 +22,7 @@ For commercial licensing, please contact support@qingflow.com
 
 // System Configuration Defaults
 export const DEFAULT_SYSTEM_NAME = 'Qing API'
-export const DEFAULT_LOGO = '/qing-api-logo-v2.png'
+export const DEFAULT_LOGO = '/qing-api-logo-v3.png'
 
 // LocalStorage Keys
 export const STORAGE_KEYS = {

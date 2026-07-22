@@ -158,7 +158,7 @@ export function Footer(props: FooterProps) {
     demoSiteEnabled,
   } = useSystemConfig()
 
-  const displayLogo = systemLogo || props.logo || '/qing-api-logo-v2.png'
+  const displayLogo = systemLogo || props.logo || '/qing-api-logo-v3.png'
   const displayName = systemName || props.name || 'Qing API'
   const isDemoSiteMode = Boolean(demoSiteEnabled)
   const currentYear = new Date().getFullYear()
