@@ -23,7 +23,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 COPY --from=frontend-builder /build/web/dist ./web/dist
-RUN go build -ldflags "-s -w -X 'github.com/QingFlow/qing-api/common.Version=$(cat VERSION)'" -o qing-api
+RUN go build -ldflags "-s -w -X 'github.com/Isiah998/new-api/common.Version=$(cat VERSION)'" -o qing-api
 
 FROM docker.m.daocloud.io/debian:bookworm-slim
 

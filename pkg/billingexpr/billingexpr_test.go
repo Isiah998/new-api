@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/QingFlow/qing-api/pkg/billingexpr"
+	"github.com/Isiah998/new-api/pkg/billingexpr"
 )
 
 // ---------------------------------------------------------------------------

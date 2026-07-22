@@ -9,9 +9,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/QingFlow/qing-api/constant"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	relayconstant "github.com/QingFlow/qing-api/relay/constant"
+	"github.com/Isiah998/new-api/constant"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	relayconstant "github.com/Isiah998/new-api/relay/constant"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 )

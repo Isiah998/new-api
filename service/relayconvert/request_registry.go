@@ -7,13 +7,13 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	claudemessages "github.com/QingFlow/qing-api/service/relayconvert/internal/claude_messages"
-	geminichat "github.com/QingFlow/qing-api/service/relayconvert/internal/gemini_chat"
-	oaichat "github.com/QingFlow/qing-api/service/relayconvert/internal/oai_chat"
-	oairesponses "github.com/QingFlow/qing-api/service/relayconvert/internal/oai_responses"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	claudemessages "github.com/Isiah998/new-api/service/relayconvert/internal/claude_messages"
+	geminichat "github.com/Isiah998/new-api/service/relayconvert/internal/gemini_chat"
+	oaichat "github.com/Isiah998/new-api/service/relayconvert/internal/oai_chat"
+	oairesponses "github.com/Isiah998/new-api/service/relayconvert/internal/oai_responses"
+	"github.com/Isiah998/new-api/types"
 	"github.com/gin-gonic/gin"
 )
 

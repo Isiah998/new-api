@@ -44,12 +44,12 @@ jobs:
       - name: Build Backend (amd64)
         run: |
           go mod download
-          go build -ldflags "-s -w -X 'qing-api/common.Version=$VERSION' -extldflags '-static'" -o qing-api-$VERSION
+          go build -ldflags "-s -w -X 'github.com/Isiah998/new-api/common.Version=$VERSION' -extldflags '-static'" -o qing-api-$VERSION
       - name: Build Backend (arm64)
         run: |
           sudo apt-get update
           DEBIAN_FRONTEND=noninteractive sudo apt-get install -y gcc-aarch64-linux-gnu
-          CC=aarch64-linux-gnu-gcc CGO_ENABLED=1 GOOS=linux GOARCH=arm64 go build -ldflags "-s -w -X 'qing-api/common.Version=$VERSION' -extldflags '-static'" -o qing-api-arm64-$VERSION
+          CC=aarch64-linux-gnu-gcc CGO_ENABLED=1 GOOS=linux GOARCH=arm64 go build -ldflags "-s -w -X 'github.com/Isiah998/new-api/common.Version=$VERSION' -extldflags '-static'" -o qing-api-arm64-$VERSION
       - name: Generate checksums
         run: sha256sum qing-api-* > checksums-linux.txt
 
@@ -60,6 +60,9 @@ jobs:
           files: |
             qing-api-*
             checksums-linux.txt
+            LICENSE
+            NOTICE
+            THIRD-PARTY-LICENSES.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -94,7 +97,7 @@ jobs:
       - name: Build Backend
         run: |
           go mod download
-          go build -ldflags "-X 'qing-api/common.Version=$VERSION'" -o qing-api-macos-$VERSION
+          go build -ldflags "-X 'github.com/Isiah998/new-api/common.Version=$VERSION'" -o qing-api-macos-$VERSION
       - name: Generate checksums
         run: shasum -a 256 qing-api-macos-* > checksums-macos.txt
 
@@ -105,6 +108,9 @@ jobs:
           files: |
             qing-api-macos-*
             checksums-macos.txt
+            LICENSE
+            NOTICE
+            THIRD-PARTY-LICENSES.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -141,7 +147,7 @@ jobs:
       - name: Build Backend
         run: |
           go mod download
-          go build -ldflags "-s -w -X 'qing-api/common.Version=$VERSION'" -o qing-api-$VERSION.exe
+          go build -ldflags "-s -w -X 'github.com/Isiah998/new-api/common.Version=$VERSION'" -o qing-api-$VERSION.exe
       - name: Generate checksums
         run: sha256sum qing-api-*.exe > checksums-windows.txt
 
@@ -152,5 +158,8 @@ jobs:
           files: |
             qing-api-*.exe
             checksums-windows.txt
+            LICENSE
+            NOTICE
+            THIRD-PARTY-LICENSES.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

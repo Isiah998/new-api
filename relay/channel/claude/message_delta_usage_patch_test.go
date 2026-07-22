@@ -3,9 +3,9 @@ package claude
 import (
 	"testing"
 
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/setting/model_setting"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/setting/model_setting"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/tidwall/gjson"

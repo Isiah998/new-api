@@ -3,7 +3,7 @@ package zhipu_4v
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/dto"
+	"github.com/Isiah998/new-api/dto"
 )
 
 func requestOpenAI2Zhipu(request dto.GeneralOpenAIRequest) *dto.GeneralOpenAIRequest {

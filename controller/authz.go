@@ -3,7 +3,7 @@ package controller
 import (
 	"net/http"
 
-	"github.com/QingFlow/qing-api/service/authz"
+	"github.com/Isiah998/new-api/service/authz"
 
 	"github.com/gin-gonic/gin"
 )

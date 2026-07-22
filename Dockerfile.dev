@@ -19,7 +19,7 @@ COPY . .
 RUN mkdir -p web/dist && \
     echo '<!doctype html><html><head><title>dev</title></head><body>use frontend dev server</body></html>' > web/dist/index.html
 
-RUN go build -ldflags "-s -w -X 'github.com/QingFlow/qing-api/common.Version=$(cat VERSION)'" -o qing-api
+RUN go build -ldflags "-s -w -X 'github.com/Isiah998/new-api/common.Version=$(cat VERSION)'" -o qing-api
 
 FROM debian:bookworm-slim
 

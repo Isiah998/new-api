@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/QingFlow/qing-api/setting/config"
+import "github.com/Isiah998/new-api/setting/config"
 
 // TokenSetting 令牌相关配置
 type TokenSetting struct {

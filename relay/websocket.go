@@ -3,10 +3,10 @@ package relay
 import (
 	"fmt"
 
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/service"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/service"
+	"github.com/Isiah998/new-api/types"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"

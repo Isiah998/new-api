@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/model"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/setting/perf_metrics_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/model"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/setting/perf_metrics_setting"
 )
 
 var hotBuckets sync.Map

@@ -5,7 +5,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 	"github.com/gin-gonic/gin"
 )
 

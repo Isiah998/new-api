@@ -1,8 +1,8 @@
 package relay
 
 import (
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/types"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/types"
 )
 
 func qingAPIErrorFromParamOverride(err error) *types.QingAPIError {

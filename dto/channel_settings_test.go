@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/constant"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

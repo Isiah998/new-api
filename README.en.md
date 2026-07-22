@@ -14,26 +14,17 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Calcium-Ion/qing-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Calcium-Ion/qing-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/Isiah998/new-api/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Isiah998/new-api?color=brightgreen" alt="license">
   </a>
-  <a href="https://github.com/Calcium-Ion/qing-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Calcium-Ion/qing-api?color=brightgreen&include_prereleases" alt="release">
+  <a href="https://github.com/Isiah998/new-api/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Isiah998/new-api?color=brightgreen&include_prereleases" alt="release">
   </a>
-  <a href="https://github.com/users/Calcium-Ion/packages/container/package/qing-api">
-    <img src="https://img.shields.io/badge/docker-ghcr.io-blue" alt="docker">
+  <a href="https://github.com/Isiah998/new-api/pkgs/container/qing-api">
+    <img src="https://img.shields.io/badge/container-ghcr.io-blue" alt="docker">
   </a>
-  <a href="https://hub.docker.com/r/CalciumIon/qing-api">
-    <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
-  </a>
-  <a href="https://goreportcard.com/report/github.com/Calcium-Ion/qing-api">
-    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/qing-api" alt="GoReportCard">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://trendshift.io/repositories/8227" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/8227" alt="Calcium-Ion%2Fqing-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+  <a href="https://goreportcard.com/report/github.com/Isiah998/new-api">
+    <img src="https://goreportcard.com/badge/github.com/Isiah998/new-api" alt="GoReportCard">
   </a>
 </p>
 
@@ -106,7 +97,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/QingFlow/qing-api.git
+git clone https://github.com/Isiah998/new-api.git
 cd qing-api
 
 # Edit docker-compose.yml configuration
@@ -121,14 +112,14 @@ docker-compose up -d
 
 ```bash
 # Pull the latest image
-docker pull calciumion/qing-api:latest
+docker pull ghcr.io/isiah998/qing-api:latest
 
 # Using SQLite (default)
 docker run --name qing-api -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 
 # Using MySQL
 docker run --name qing-api -d --restart always \
@@ -136,7 +127,7 @@ docker run --name qing-api -d --restart always \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 > **💡 Tip:** `-v ./data:/data` will save data in the `data` folder of the current directory, you can also change it to an absolute path like `-v /your/custom/path:/data`
@@ -150,7 +141,7 @@ docker run --name qing-api -d --restart always \
 > [!WARNING]
 > When operating this project as a public generative AI service or API resale service, users should first complete all required filing, licensing, content safety, real-name verification, log retention, tax, payment, and upstream authorization obligations.
 
-📖 For more deployment methods, please refer to [Deployment Guide](https://docs.newapi.pro/en/docs/installation)
+📖 For more deployment methods, please refer to [Deployment Guide](https://github.com/Isiah998/new-api/tree/main/docs/installation)
 
 ---
 
@@ -158,7 +149,7 @@ docker run --name qing-api -d --restart always \
 
 <div align="center">
 
-### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QingFlow/qing-api)
+### 📖 [Official Documentation](https://github.com/Isiah998/new-api/tree/main/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Isiah998/new-api)
 
 </div>
 
@@ -166,17 +157,17 @@ docker run --name qing-api -d --restart always \
 
 | Category | Link |
 |------|------|
-| 🚀 Deployment Guide | [Installation Documentation](https://docs.newapi.pro/en/docs/installation) |
-| ⚙️ Environment Configuration | [Environment Variables](https://docs.newapi.pro/en/docs/installation/config-maintenance/environment-variables) |
-| 📡 API Documentation | [API Documentation](https://docs.newapi.pro/en/docs/api) |
-| ❓ FAQ | [FAQ](https://docs.newapi.pro/en/docs/support/faq) |
-| 💬 Community Interaction | [Communication Channels](https://docs.newapi.pro/en/docs/support/community-interaction) |
+| 🚀 Deployment Guide | [Installation Documentation](https://github.com/Isiah998/new-api/tree/main/docs/installation) |
+| ⚙️ Environment Configuration | [Environment Variables](https://github.com/Isiah998/new-api/tree/main/docs/installation) |
+| 📡 API Documentation | [API Documentation](https://github.com/Isiah998/new-api/tree/main/docs) |
+| ❓ FAQ | [FAQ](https://github.com/Isiah998/new-api/issues) |
+| 💬 Community Interaction | [Communication Channels](https://github.com/Isiah998/new-api/issues) |
 
 ---
 
 ## ✨ Key Features
 
-> For detailed features, please refer to [Features Introduction](https://docs.newapi.pro/en/docs/guide/wiki/basic-concepts/features-introduction)
+> For detailed features, please refer to [Features Introduction](https://github.com/Isiah998/new-api/tree/main/docs)
 
 ### 🎨 Core Functions
 
@@ -205,11 +196,11 @@ docker run --name qing-api -d --restart always \
 ### 🚀 Advanced Features
 
 **API Format Support:**
-- ⚡ [OpenAI Responses](https://docs.newapi.pro/en/docs/api/ai-model/chat/openai/create-response)
-- ⚡ [OpenAI Realtime API](https://docs.newapi.pro/en/docs/api/ai-model/realtime/create-realtime-session) (including Azure)
-- ⚡ [Claude Messages](https://docs.newapi.pro/en/docs/api/ai-model/chat/create-message)
-- ⚡ [Google Gemini](https://doc.qingapi.pro/en/api/google-gemini-chat)
-- 🔄 [Rerank Models](https://docs.newapi.pro/en/docs/api/ai-model/rerank/create-rerank) (Cohere, Jina)
+- ⚡ [OpenAI Responses](https://github.com/Isiah998/new-api/tree/main/docs)
+- ⚡ [OpenAI Realtime API](https://github.com/Isiah998/new-api/tree/main/docs) (including Azure)
+- ⚡ [Claude Messages](https://github.com/Isiah998/new-api/tree/main/docs)
+- ⚡ [Google Gemini](https://github.com/Isiah998/new-api/tree/main/docs)
+- 🔄 [Rerank Models](https://github.com/Isiah998/new-api/tree/main/docs) (Cohere, Jina)
 
 **Intelligent Routing:**
 - ⚖️ Channel weighted random
@@ -252,16 +243,16 @@ docker run --name qing-api -d --restart always \
 
 ## 🤖 Model Support
 
-> For details, please refer to [API Documentation - Gateway Interface](https://docs.newapi.pro/en/docs/api)
+> For details, please refer to [API Documentation - Gateway Interface](https://github.com/Isiah998/new-api/tree/main/docs)
 
 | Model Type | Description | Documentation |
 |---------|------|------|
 | 🤖 OpenAI GPTs | gpt-4-gizmo-* series | - |
-| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [Documentation](https://doc.qingapi.pro/en/api/midjourney-proxy-image) |
-| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [Documentation](https://doc.qingapi.pro/en/api/suno-music) |
-| 🔄 Rerank | Cohere, Jina | [Documentation](https://docs.newapi.pro/en/docs/api/ai-model/rerank/create-rerank) |
-| 💬 Claude | Messages format | [Documentation](https://docs.newapi.pro/en/docs/api/ai-model/chat/create-message) |
-| 🌐 Gemini | Google Gemini format | [Documentation](https://doc.qingapi.pro/en/api/google-gemini-chat) |
+| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [Documentation](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [Documentation](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🔄 Rerank | Cohere, Jina | [Documentation](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 💬 Claude | Messages format | [Documentation](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🌐 Gemini | Google Gemini format | [Documentation](https://github.com/Isiah998/new-api/tree/main/docs) |
 | 🔧 Dify | ChatFlow mode | - |
 | 🎯 Custom upstream | Supports configuring legally authorized upstream endpoints | - |
 
@@ -270,16 +261,16 @@ docker run --name qing-api -d --restart always \
 <details>
 <summary>View complete interface list</summary>
 
-- [Chat Interface (Chat Completions)](https://docs.newapi.pro/en/docs/api/ai-model/chat/openai/create-chat-completion)
-- [Response Interface (Responses)](https://docs.newapi.pro/en/docs/api/ai-model/chat/openai/create-response)
-- [Image Interface (Image)](https://docs.newapi.pro/en/docs/api/ai-model/images/openai/v1-images-generations--post)
-- [Audio Interface (Audio)](https://docs.newapi.pro/en/docs/api/ai-model/audio/openai/create-transcription)
-- [Video Interface (Video)](https://docs.newapi.pro/en/docs/api/ai-model/videos/create-video-generation)
-- [Embedding Interface (Embeddings)](https://docs.newapi.pro/en/docs/api/ai-model/embeddings/create-embedding)
-- [Rerank Interface (Rerank)](https://docs.newapi.pro/en/docs/api/ai-model/rerank/create-rerank)
-- [Realtime Conversation (Realtime)](https://docs.newapi.pro/en/docs/api/ai-model/realtime/create-realtime-session)
-- [Claude Chat](https://docs.newapi.pro/en/docs/api/ai-model/chat/create-message)
-- [Google Gemini Chat](https://doc.qingapi.pro/en/api/google-gemini-chat)
+- [Chat Interface (Chat Completions)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Response Interface (Responses)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Image Interface (Image)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Audio Interface (Audio)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Video Interface (Video)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Embedding Interface (Embeddings)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Rerank Interface (Rerank)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Realtime Conversation (Realtime)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Claude Chat](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Google Gemini Chat](https://github.com/Isiah998/new-api/tree/main/docs)
 
 </details>
 
@@ -288,7 +279,7 @@ docker run --name qing-api -d --restart always \
 ## 🚢 Deployment
 
 > [!TIP]
-> **Latest Docker image:** `calciumion/qing-api:latest`
+> **Latest Docker image:** `ghcr.io/isiah998/qing-api:latest`
 
 ### 📋 Deployment Requirements
 
@@ -331,7 +322,7 @@ docker run --name qing-api -d --restart always \
 | `PYROSCOPE_BLOCK_RATE` | Pyroscope block sampling rate | `5` |
 | `HOSTNAME` | Hostname tag for Pyroscope | `qing-api` |
 
-📖 **Complete configuration:** [Environment Variables Documentation](https://docs.newapi.pro/en/docs/installation/config-maintenance/environment-variables)
+📖 **Complete configuration:** [Environment Variables Documentation](https://github.com/Isiah998/new-api/tree/main/docs/installation)
 
 </details>
 
@@ -342,7 +333,7 @@ docker run --name qing-api -d --restart always \
 
 ```bash
 # Clone the project
-git clone https://github.com/QingFlow/qing-api.git
+git clone https://github.com/Isiah998/new-api.git
 cd qing-api
 
 # Edit configuration
@@ -363,7 +354,7 @@ docker run --name qing-api -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 **Using MySQL:**
@@ -373,7 +364,7 @@ docker run --name qing-api -d --restart always \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 > **💡 Path explanation:** 
@@ -434,8 +425,8 @@ See [User authentication and login sessions](./docs/authentication.md) for the t
 
 | Project | Description |
 |------|------|
-| [qing-api-key-tool](https://github.com/Calcium-Ion/qing-api-key-tool) | Key quota query tool |
-| [qing-api-horizon](https://github.com/Calcium-Ion/qing-api-horizon) | Qing API high-performance optimized version |
+| [new-api-key-tool](https://github.com/Calcium-Ion/new-api-key-tool) | Key quota query tool |
+| [new-api-horizon](https://github.com/Calcium-Ion/new-api-horizon) | New API high-performance optimized version |
 
 ---
 
@@ -445,10 +436,10 @@ See [User authentication and login sessions](./docs/authentication.md) for the t
 
 | Resource | Link |
 |------|------|
-| 📘 FAQ | [FAQ](https://docs.newapi.pro/en/docs/support/faq) |
-| 💬 Community Interaction | [Communication Channels](https://docs.newapi.pro/en/docs/support/community-interaction) |
-| 🐛 Issue Feedback | [Issue Feedback](https://docs.newapi.pro/en/docs/support/feedback-issues) |
-| 📚 Complete Documentation | [Official Documentation](https://docs.newapi.pro/en/docs) |
+| 📘 FAQ | [FAQ](https://github.com/Isiah998/new-api/issues) |
+| 💬 Community Interaction | [Communication Channels](https://github.com/Isiah998/new-api/issues) |
+| 🐛 Issue Feedback | [Issue Feedback](https://github.com/Isiah998/new-api/issues) |
+| 📚 Complete Documentation | [Official Documentation](https://github.com/Isiah998/new-api/tree/main/docs) |
 
 ### 🤝 Contribution Guide
 
@@ -461,11 +452,22 @@ Welcome all forms of contribution!
 
 ---
 
+## 📜 License
+
+Qing API is a modified version of [New API](https://github.com/QuantumNous/new-api), which is based on [One API](https://github.com/songquanpeng/one-api). This version remains licensed under the [GNU Affero General Public License v3.0 (AGPLv3)](./LICENSE).
+
+- The corresponding source code for this Qing API version is published at [Isiah998/new-api](https://github.com/Isiah998/new-api).
+- Existing copyright notices and New API's additional attribution terms are preserved in [NOTICE](./NOTICE).
+- If you operate a modified version as a network service, users interacting with it must be offered the corresponding source code as required by AGPLv3 Section 13.
+- Qing API is the product brand of this modified distribution; the rebrand does not replace the copyright ownership of upstream contributors.
+
+---
+
 ## 🌟 Star History
 
 <div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/qing-api&type=Date)](https://star-history.com/#Calcium-Ion/qing-api&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Isiah998/new-api&type=Date)](https://star-history.com/#Isiah998/new-api&Date)
 
 </div>
 
@@ -477,7 +479,7 @@ Welcome all forms of contribution!
 
 If this project is helpful to you, welcome to give us a ⭐️ Star！
 
-**[Official Documentation](https://docs.newapi.pro/en/docs)** • **[Issue Feedback](https://github.com/Calcium-Ion/qing-api/issues)** • **[Latest Release](https://github.com/Calcium-Ion/qing-api/releases)**
+**[Official Documentation](https://github.com/Isiah998/new-api/tree/main/docs)** • **[Issue Feedback](https://github.com/Isiah998/new-api/issues)** • **[Latest Release](https://github.com/Isiah998/new-api/releases)**
 
 <sub>Built with ❤️ by QingFlow</sub>
 

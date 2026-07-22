@@ -3,8 +3,8 @@ package mistral
 import (
 	"regexp"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/dto"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/dto"
 )
 
 var mistralToolCallIdRegexp = regexp.MustCompile("^[a-zA-Z0-9]{9}$")

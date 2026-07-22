@@ -3,7 +3,7 @@ package dto
 import (
 	"encoding/json"
 
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/types"
 )
 
 type OpenAIResponsesCompactionResponse struct {

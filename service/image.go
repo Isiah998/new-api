@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
 
 	"golang.org/x/image/webp"
 )

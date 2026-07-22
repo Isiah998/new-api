@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 )

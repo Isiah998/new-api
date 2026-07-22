@@ -2,7 +2,7 @@
 
 本文档提供使用宝塔面板 Docker 功能部署 Qing API 的图文教程。
 
-> 📖 官方文档：[宝塔面板部署](https://docs.newapi.pro/zh/docs/installation/deployment-methods/bt-docker-installation)
+> 📖 项目文档：[宝塔面板部署](https://github.com/Isiah998/new-api/blob/main/docs/installation/BT.md)
 
 ***
 
@@ -57,7 +57,7 @@
 version: '3'
 services:
   qing-api:
-    image: calciumion/qing-api:latest
+    image: ghcr.io/isiah998/qing-api:latest
     container_name: qing-api
     restart: always
     ports:
@@ -126,7 +126,7 @@ volumes:
 
 ```bash
 # 拉取最新镜像
-docker pull calciumion/qing-api:latest
+docker pull ghcr.io/isiah998/qing-api:latest
 
 # 重启容器
 docker-compose down && docker-compose up -d
@@ -136,10 +136,10 @@ docker-compose down && docker-compose up -d
 
 ## 相关链接
 
-- [官方文档](https://docs.newapi.pro/zh/docs/installation)
-- [环境变量配置](https://docs.newapi.pro/zh/docs/installation/config-maintenance/environment-variables)
-- [常见问题](https://docs.newapi.pro/zh/docs/support/faq)
-- [GitHub 仓库](https://github.com/QingFlow/qing-api)
+- [部署文档](https://github.com/Isiah998/new-api/tree/main/docs/installation)
+- [项目说明](https://github.com/Isiah998/new-api#readme)
+- [问题反馈](https://github.com/Isiah998/new-api/issues)
+- [GitHub 仓库](https://github.com/Isiah998/new-api)
 
 ***
 
@@ -148,4 +148,3 @@ docker-compose down && docker-compose up -d
 ![宝塔面板 Docker 安装](https://github.com/user-attachments/assets/7a6fc03e-c457-45e4-b8f9-184508fc26b0)
 
 > ⚠️ 注意：密钥为环境变量 `SESSION_SECRET`，请务必设置！
-

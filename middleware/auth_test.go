@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/service"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/service"
 	"github.com/gin-gonic/gin"
 	"github.com/glebarez/sqlite"
 	"github.com/golang-jwt/jwt/v5"

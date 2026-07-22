@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/setting"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/setting"
 	pancake "github.com/waffo-com/waffo-pancake-sdk-go"
 )
 

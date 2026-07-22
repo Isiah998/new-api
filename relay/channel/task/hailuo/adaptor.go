@@ -9,17 +9,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/model"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/model"
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/relay/channel"
-	taskcommon "github.com/QingFlow/qing-api/relay/channel/task/taskcommon"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/service"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/relay/channel"
+	taskcommon "github.com/Isiah998/new-api/relay/channel/task/taskcommon"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/service"
 )
 
 // https://platform.minimaxi.com/docs/api-reference/video-generation-intro

@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/types"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
 )

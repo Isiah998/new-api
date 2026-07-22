@@ -3,8 +3,8 @@ package billing_setting
 import (
 	"fmt"
 
-	"github.com/QingFlow/qing-api/pkg/billingexpr"
-	"github.com/QingFlow/qing-api/setting/config"
+	"github.com/Isiah998/new-api/pkg/billingexpr"
+	"github.com/Isiah998/new-api/setting/config"
 	"github.com/samber/lo"
 )
 

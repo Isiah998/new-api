@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QingFlow/qing-api/setting/config"
+	"github.com/Isiah998/new-api/setting/config"
 )
 
 //var claudeHeadersSettings = map[string][]string{}

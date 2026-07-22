@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/types"
 )
 
 type StatusCodeRange struct {

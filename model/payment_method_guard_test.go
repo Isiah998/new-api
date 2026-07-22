@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

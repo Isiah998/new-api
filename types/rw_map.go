@@ -3,7 +3,7 @@ package types
 import (
 	"sync"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 )
 
 type RWMap[K comparable, V any] struct {

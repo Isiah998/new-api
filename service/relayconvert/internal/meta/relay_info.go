@@ -1,6 +1,6 @@
 package meta
 
-import relaycommon "github.com/QingFlow/qing-api/relay/common"
+import relaycommon "github.com/Isiah998/new-api/relay/common"
 
 func RelayInfoChannelType(info *relaycommon.RelayInfo) int {
 	if info == nil || info.ChannelMeta == nil {

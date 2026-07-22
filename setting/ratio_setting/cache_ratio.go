@@ -1,7 +1,7 @@
 package ratio_setting
 
 import (
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/types"
 )
 
 var defaultCacheRatio = map[string]float64{

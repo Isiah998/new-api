@@ -1,6 +1,6 @@
 package model_setting
 
-import "github.com/QingFlow/qing-api/setting/config"
+import "github.com/Isiah998/new-api/setting/config"
 
 // GrokSettings defines Grok model configuration.
 type GrokSettings struct {

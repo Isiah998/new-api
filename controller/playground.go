@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/QingFlow/qing-api/middleware"
-	"github.com/QingFlow/qing-api/model"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/middleware"
+	"github.com/Isiah998/new-api/model"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/types"
 
 	"github.com/gin-gonic/gin"
 )

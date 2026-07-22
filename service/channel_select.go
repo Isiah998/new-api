@@ -3,11 +3,11 @@ package service
 import (
 	"errors"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/logger"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/logger"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/setting"
 	"github.com/gin-gonic/gin"
 )
 

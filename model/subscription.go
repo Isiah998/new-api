@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/pkg/cachex"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/pkg/cachex"
 	"github.com/samber/hot"
 	"github.com/shopspring/decimal"
 	"gorm.io/gorm"

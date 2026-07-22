@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/service/relayconvert/internal/jsonutil"
-	relaymeta "github.com/QingFlow/qing-api/service/relayconvert/internal/meta"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/service/relayconvert/internal/jsonutil"
+	relaymeta "github.com/Isiah998/new-api/service/relayconvert/internal/meta"
 )
 
 func GeminiGenerateContentRequestToOpenAIChat(geminiRequest *dto.GeminiChatRequest, info *relaycommon.RelayInfo) (*dto.GeneralOpenAIRequest, error) {

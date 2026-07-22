@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 )
 
 var userUsableGroups = map[string]string{

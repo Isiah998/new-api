@@ -3,8 +3,8 @@ package zhipu_4v
 import (
 	"time"
 
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/types"
 )
 
 //	type ZhipuMessage struct {

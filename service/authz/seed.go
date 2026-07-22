@@ -3,7 +3,7 @@ package authz
 import (
 	"fmt"
 
-	"github.com/QingFlow/qing-api/model"
+	"github.com/Isiah998/new-api/model"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

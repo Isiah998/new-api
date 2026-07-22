@@ -1,6 +1,6 @@
 package model
 
-import "github.com/QingFlow/qing-api/common"
+import "github.com/Isiah998/new-api/common"
 
 // GetDBTimestamp returns a UNIX timestamp from database time.
 // Falls back to application time on error.

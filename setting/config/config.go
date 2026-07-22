@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 )
 
 // ConfigManager 统一管理所有配置

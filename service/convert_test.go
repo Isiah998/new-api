@@ -3,8 +3,8 @@ package service
 import (
 	"testing"
 
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

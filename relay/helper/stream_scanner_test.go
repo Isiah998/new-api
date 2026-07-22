@@ -13,9 +13,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QingFlow/qing-api/constant"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/setting/operation_setting"
+	"github.com/Isiah998/new-api/constant"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/setting/operation_setting"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

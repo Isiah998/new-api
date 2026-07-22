@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/QingFlow/qing-api/common"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/types"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"

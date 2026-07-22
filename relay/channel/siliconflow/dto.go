@@ -1,6 +1,6 @@
 package siliconflow
 
-import "github.com/QingFlow/qing-api/dto"
+import "github.com/Isiah998/new-api/dto"
 
 type SFTokens struct {
 	InputTokens  int `json:"input_tokens"`

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/logger"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/logger"
 
 	"github.com/shopspring/decimal"
 	"gorm.io/gorm"

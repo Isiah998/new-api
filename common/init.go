@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/constant"
 )
 
 var (
@@ -25,7 +25,7 @@ var (
 func printHelp() {
 	fmt.Println("Qing API (Based OneAPI) " + Version + " - The next-generation LLM gateway and AI asset management system supports multiple languages.")
 	fmt.Println("Original Project: OneAPI by JustSong - https://github.com/songquanpeng/one-api")
-	fmt.Println("Maintainer: QingFlow - https://github.com/QingFlow/qing-api")
+	fmt.Println("Maintainer: QingFlow - https://github.com/Isiah998/new-api")
 	fmt.Println("Usage: qingapi [--port <port>] [--log-dir <log directory>] [--version] [--help]")
 }
 

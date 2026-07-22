@@ -7,13 +7,13 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/relay/channel"
-	"github.com/QingFlow/qing-api/relay/channel/openai"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	relayconstant "github.com/QingFlow/qing-api/relay/constant"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/relay/channel"
+	"github.com/Isiah998/new-api/relay/channel/openai"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	relayconstant "github.com/Isiah998/new-api/relay/constant"
+	"github.com/Isiah998/new-api/types"
 
 	"github.com/gin-gonic/gin"
 )

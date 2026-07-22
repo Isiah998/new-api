@@ -1,6 +1,6 @@
 package xai
 
-import "github.com/QingFlow/qing-api/dto"
+import "github.com/Isiah998/new-api/dto"
 
 // ChatCompletionResponse represents the response from XAI chat completion API
 type ChatCompletionResponse struct {

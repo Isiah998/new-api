@@ -3,13 +3,13 @@ package relayconvert
 import (
 	"testing"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	sharedgemini "github.com/QingFlow/qing-api/service/relayconvert/internal/shared/gemini"
-	"github.com/QingFlow/qing-api/setting/model_setting"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	sharedgemini "github.com/Isiah998/new-api/service/relayconvert/internal/shared/gemini"
+	"github.com/Isiah998/new-api/setting/model_setting"
+	"github.com/Isiah998/new-api/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

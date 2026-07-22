@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/relay/channel/codex"
-	"github.com/QingFlow/qing-api/service"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/relay/channel/codex"
+	"github.com/Isiah998/new-api/service"
 
 	"github.com/gin-gonic/gin"
 )

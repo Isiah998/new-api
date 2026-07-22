@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
 )

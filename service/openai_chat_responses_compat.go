@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/service/relayconvert"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/service/relayconvert"
 )
 
 func ChatCompletionsRequestToResponsesRequest(req *dto.GeneralOpenAIRequest) (*dto.OpenAIResponsesRequest, error) {

@@ -1,4 +1,4 @@
-module github.com/QingFlow/qing-api
+module github.com/Isiah998/new-api
 
 // +heroku goVersion go1.18
 go 1.25.1

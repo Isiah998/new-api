@@ -3,7 +3,7 @@ package service
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/constant"
 )
 
 func CoverTaskActionToModelName(platform constant.TaskPlatform, action string) string {

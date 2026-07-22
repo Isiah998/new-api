@@ -3,9 +3,9 @@ package ratio_setting
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/setting/operation_setting"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/setting/operation_setting"
+	"github.com/Isiah998/new-api/types"
 )
 
 // from songquanpeng/one-api

@@ -1,7 +1,13 @@
-qing-api Notices
+Qing API Notices
 
-qing-api
-Copyright (c) QingFlow and contributors.
+Qing API modifications and branding
+Copyright (c) 2026 QingFlow and Qing API contributors.
+
+This project is a modified version of New API:
+https://github.com/QuantumNous/new-api
+
+New API
+Copyright (c) QuantumNous and New API contributors.
 
 This project is licensed under the GNU Affero General Public License v3.0.
 See LICENSE for the full project license terms.
@@ -13,16 +19,20 @@ the following reasonable legal notice and author attribution must be preserved
 by modified versions in the Appropriate Legal Notices and in any prominent
 about, legal, footer, or attribution location presented by the user interface:
 
-"Frontend design and development by Qing API contributors."
+"Frontend design and development by New API contributors."
 
 Modified versions that present a user interface must also preserve a visible
 link to the original project in a prominent about, legal, footer, or
 attribution location:
 
-https://github.com/QingFlow/qing-api
+https://github.com/QuantumNous/new-api
 
 Modified versions must not misrepresent the origin of the software and must
 mark their changes in accordance with AGPLv3 Section 7(c).
+
+The corresponding source code for this Qing API version is published at:
+
+https://github.com/Isiah998/new-api
 
 ==== Third-Party Notices ====
 

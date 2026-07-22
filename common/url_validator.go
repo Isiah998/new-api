@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/constant"
 )
 
 // ValidateRedirectURL validates that a redirect URL is safe to use.

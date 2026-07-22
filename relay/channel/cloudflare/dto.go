@@ -1,6 +1,6 @@
 package cloudflare
 
-import "github.com/QingFlow/qing-api/dto"
+import "github.com/Isiah998/new-api/dto"
 
 type CfRequest struct {
 	Messages    []dto.Message `json:"messages,omitempty"`

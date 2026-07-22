@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/setting/ratio_setting"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/setting/ratio_setting"
 )
 
 func FetchCodexChannelModels(channel *model.Channel) ([]string, error) {

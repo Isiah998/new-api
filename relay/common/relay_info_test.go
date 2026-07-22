@@ -3,7 +3,7 @@ package common
 import (
 	"testing"
 
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/types"
 	"github.com/stretchr/testify/require"
 )
 

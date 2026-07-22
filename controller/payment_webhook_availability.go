@@ -3,8 +3,8 @@ package controller
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/setting"
-	"github.com/QingFlow/qing-api/setting/operation_setting"
+	"github.com/Isiah998/new-api/setting"
+	"github.com/Isiah998/new-api/setting/operation_setting"
 )
 
 func isPaymentComplianceConfirmed() bool {

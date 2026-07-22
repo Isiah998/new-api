@@ -15,30 +15,17 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Calcium-Ion/qing-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Calcium-Ion/qing-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/Isiah998/new-api/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Isiah998/new-api?color=brightgreen" alt="license">
   </a><!--
-  --><a href="https://github.com/Calcium-Ion/qing-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Calcium-Ion/qing-api?color=brightgreen&include_prereleases" alt="release">
+  --><a href="https://github.com/Isiah998/new-api/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Isiah998/new-api?color=brightgreen&include_prereleases" alt="release">
   </a><!--
-  --><a href="https://hub.docker.com/r/CalciumIon/qing-api">
-    <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
+  --><a href="https://github.com/Isiah998/new-api/pkgs/container/qing-api">
+    <img src="https://img.shields.io/badge/container-ghcr.io-blue" alt="docker">
   </a><!--
-  --><a href="https://goreportcard.com/report/github.com/Calcium-Ion/qing-api">
-    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/qing-api" alt="GoReportCard">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://trendshift.io/repositories/20180" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QingFlow%2Fqing-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
-  </a>
-  <br>
-  <a href="https://hellogithub.com/repository/QingFlow/qing-api" target="_blank">
-    <img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=539ac4217e69431684ad4a0bab768811&claim_uid=tbFPfKIDHpc4TzR" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" />
-  </a><!--
-  --><a href="https://www.producthunt.com/products/qing-api/launches/qing-api?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-qing-api" target="_blank" rel="noopener noreferrer">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="Qing API - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+  --><a href="https://goreportcard.com/report/github.com/Isiah998/new-api">
+    <img src="https://goreportcard.com/badge/github.com/Isiah998/new-api" alt="GoReportCard">
   </a>
 </p>
 
@@ -111,7 +98,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/QingFlow/qing-api.git
+git clone https://github.com/Isiah998/new-api.git
 cd qing-api
 
 # 编辑 docker-compose.yml 配置
@@ -126,14 +113,14 @@ docker-compose up -d
 
 ```bash
 # 拉取最新镜像
-docker pull calciumion/qing-api:latest
+docker pull ghcr.io/isiah998/qing-api:latest
 
 # 使用 SQLite（默认）
 docker run --name qing-api -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 
 # 使用 MySQL
 docker run --name qing-api -d --restart always \
@@ -141,7 +128,7 @@ docker run --name qing-api -d --restart always \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 > **💡 提示：** `-v ./data:/data` 会将数据保存在当前目录的 `data` 文件夹中，你也可以改为绝对路径如 `-v /your/custom/path:/data`
@@ -155,7 +142,7 @@ docker run --name qing-api -d --restart always \
 > [!WARNING]
 > 将本项目作为面向公众的生成式 AI 服务或 API 转售服务运营时，使用者应先完成备案、内容安全、实名、日志留存、税务、支付和上游授权等合规义务。
 
-📖 更多部署方式请参考 [部署指南](https://docs.newapi.pro/zh/docs/installation)
+📖 更多部署方式请参考 [部署指南](https://github.com/Isiah998/new-api/tree/main/docs/installation)
 
 ---
 
@@ -163,7 +150,7 @@ docker run --name qing-api -d --restart always \
 
 <div align="center">
 
-### 📖 [官方文档](https://docs.newapi.pro/zh/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QingFlow/qing-api)
+### 📖 [官方文档](https://github.com/Isiah998/new-api/tree/main/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Isiah998/new-api)
 
 </div>
 
@@ -171,17 +158,17 @@ docker run --name qing-api -d --restart always \
 
 | 分类 | 链接 |
 |------|------|
-| 🚀 部署指南 | [安装文档](https://docs.newapi.pro/zh/docs/installation) |
-| ⚙️ 环境配置 | [环境变量](https://docs.newapi.pro/zh/docs/installation/config-maintenance/environment-variables) |
-| 📡 接口文档 | [API 文档](https://docs.newapi.pro/zh/docs/api) |
-| ❓ 常见问题 | [FAQ](https://docs.newapi.pro/zh/docs/support/faq) |
-| 💬 社区交流 | [交流渠道](https://docs.newapi.pro/zh/docs/support/community-interaction) |
+| 🚀 部署指南 | [安装文档](https://github.com/Isiah998/new-api/tree/main/docs/installation) |
+| ⚙️ 环境配置 | [环境变量](https://github.com/Isiah998/new-api/tree/main/docs/installation) |
+| 📡 接口文档 | [API 文档](https://github.com/Isiah998/new-api/tree/main/docs) |
+| ❓ 常见问题 | [FAQ](https://github.com/Isiah998/new-api/issues) |
+| 💬 社区交流 | [交流渠道](https://github.com/Isiah998/new-api/issues) |
 
 ---
 
 ## ✨ 主要特性
 
-> 详细特性请参考 [特性说明](https://docs.newapi.pro/zh/docs/guide/wiki/basic-concepts/features-introduction)
+> 详细特性请参考 [特性说明](https://github.com/Isiah998/new-api/tree/main/docs)
 
 ### 🎨 核心功能
 
@@ -206,16 +193,16 @@ docker run --name qing-api -d --restart always \
 - 🤖 LinuxDO 授权登录
 - 📱 Telegram 授权登录
 - 🔑 OIDC 统一认证
-- 🔍 Key 查询使用额度（配合 [qing-api-key-tool](https://github.com/Calcium-Ion/qing-api-key-tool)）
+- 🔍 Key 查询使用额度（配合 [new-api-key-tool](https://github.com/Calcium-Ion/new-api-key-tool)）
 
 ### 🚀 高级功能
 
 **API 格式支持：**
-- ⚡ [OpenAI Responses](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/create-response)
-- ⚡ [OpenAI Realtime API](https://docs.newapi.pro/zh/docs/api/ai-model/realtime/create-realtime-session)（含 Azure）
-- ⚡ [Claude Messages](https://docs.newapi.pro/zh/docs/api/ai-model/chat/create-message)
-- ⚡ [Google Gemini](https://doc.qingapi.pro/api/google-gemini-chat)
-- 🔄 [Rerank 模型](https://docs.newapi.pro/zh/docs/api/ai-model/rerank/create-rerank)（Cohere、Jina）
+- ⚡ [OpenAI Responses](https://github.com/Isiah998/new-api/tree/main/docs)
+- ⚡ [OpenAI Realtime API](https://github.com/Isiah998/new-api/tree/main/docs)（含 Azure）
+- ⚡ [Claude Messages](https://github.com/Isiah998/new-api/tree/main/docs)
+- ⚡ [Google Gemini](https://github.com/Isiah998/new-api/tree/main/docs)
+- 🔄 [Rerank 模型](https://github.com/Isiah998/new-api/tree/main/docs)（Cohere、Jina）
 
 **智能路由：**
 - ⚖️ 渠道加权随机
@@ -258,17 +245,17 @@ docker run --name qing-api -d --restart always \
 
 ## 🤖 模型支持
 
-> 详情请参考 [接口文档 - 网关接口](https://docs.newapi.pro/zh/docs/api)
+> 详情请参考 [接口文档 - 网关接口](https://github.com/Isiah998/new-api/tree/main/docs)
 
 | 模型类型 | 说明 | 文档 |
 |---------|------|------|
-| 🤖 OpenAI-Compatible | OpenAI 兼容模型 | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/createchatcompletion) |
-| 🤖 OpenAI Responses | OpenAI Responses 格式 | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/createresponse) |
-| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [文档](https://doc.qingapi.pro/api/midjourney-proxy-image) |
-| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [文档](https://doc.qingapi.pro/api/suno-music) |
-| 🔄 Rerank | Cohere、Jina | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/rerank/create-rerank) |
-| 💬 Claude | Messages 格式 | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/chat/createmessage) |
-| 🌐 Gemini | Google Gemini 格式 | [文档](https://docs.newapi.pro/zh/docs/api/ai-model/chat/gemini/geminirelayv1beta) |
+| 🤖 OpenAI-Compatible | OpenAI 兼容模型 | [文档](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🤖 OpenAI Responses | OpenAI Responses 格式 | [文档](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [文档](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [文档](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🔄 Rerank | Cohere、Jina | [文档](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 💬 Claude | Messages 格式 | [文档](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🌐 Gemini | Google Gemini 格式 | [文档](https://github.com/Isiah998/new-api/tree/main/docs) |
 | 🔧 Dify | ChatFlow 模式 | - |
 | 🎯 自定义上游 | 支持配置合法授权的上游接口地址 | - |
 
@@ -277,16 +264,16 @@ docker run --name qing-api -d --restart always \
 <details>
 <summary>查看完整接口列表</summary>
 
-- [聊天接口 (Chat Completions)](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/createchatcompletion)
-- [响应接口 (Responses)](https://docs.newapi.pro/zh/docs/api/ai-model/chat/openai/createresponse)
-- [图像接口 (Image)](https://docs.newapi.pro/zh/docs/api/ai-model/images/openai/post-v1-images-generations)
-- [音频接口 (Audio)](https://docs.newapi.pro/zh/docs/api/ai-model/audio/openai/create-transcription)
-- [视频接口 (Video)](https://docs.newapi.pro/zh/docs/api/ai-model/audio/openai/createspeech)
-- [嵌入接口 (Embeddings)](https://docs.newapi.pro/zh/docs/api/ai-model/embeddings/createembedding)
-- [重排序接口 (Rerank)](https://docs.newapi.pro/zh/docs/api/ai-model/rerank/creatererank)
-- [实时对话 (Realtime)](https://docs.newapi.pro/zh/docs/api/ai-model/realtime/createrealtimesession)
-- [Claude 聊天](https://docs.newapi.pro/zh/docs/api/ai-model/chat/createmessage)
-- [Google Gemini 聊天](https://docs.newapi.pro/zh/docs/api/ai-model/chat/gemini/geminirelayv1beta)
+- [聊天接口 (Chat Completions)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [响应接口 (Responses)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [图像接口 (Image)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [音频接口 (Audio)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [视频接口 (Video)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [嵌入接口 (Embeddings)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [重排序接口 (Rerank)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [实时对话 (Realtime)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Claude 聊天](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Google Gemini 聊天](https://github.com/Isiah998/new-api/tree/main/docs)
 
 </details>
 
@@ -295,7 +282,7 @@ docker run --name qing-api -d --restart always \
 ## 🚢 部署
 
 > [!TIP]
-> **最新版 Docker 镜像：** `calciumion/qing-api:latest`
+> **最新版 Docker 镜像：** `ghcr.io/isiah998/qing-api:latest`
 
 ### 📋 部署要求
 
@@ -338,7 +325,7 @@ docker run --name qing-api -d --restart always \
 | `PYROSCOPE_BLOCK_RATE` | Pyroscope block 采样率                               | `5` |
 | `HOSTNAME` | Pyroscope 标签里的主机名                                          | `qing-api` |
 
-📖 **完整配置：** [环境变量文档](https://docs.newapi.pro/zh/docs/installation/config-maintenance/environment-variables)
+📖 **完整配置：** [环境变量文档](https://github.com/Isiah998/new-api/tree/main/docs/installation)
 
 </details>
 
@@ -349,7 +336,7 @@ docker run --name qing-api -d --restart always \
 
 ```bash
 # 克隆项目
-git clone https://github.com/QingFlow/qing-api.git
+git clone https://github.com/Isiah998/new-api.git
 cd qing-api
 
 # 编辑配置
@@ -370,7 +357,7 @@ docker run --name qing-api -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 **使用 MySQL：**
@@ -380,7 +367,7 @@ docker run --name qing-api -d --restart always \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 > **💡 路径说明：**
@@ -441,8 +428,8 @@ Token、Origin 校验和 PAT 契约见[用户鉴权与登录会话](./docs/authe
 
 | 项目 | 说明 |
 |------|------|
-| [qing-api-key-tool](https://github.com/Calcium-Ion/qing-api-key-tool) | Key 额度查询工具 |
-| [qing-api-horizon](https://github.com/Calcium-Ion/qing-api-horizon) | Qing API 高性能优化版 |
+| [new-api-key-tool](https://github.com/Calcium-Ion/new-api-key-tool) | Key 额度查询工具 |
+| [new-api-horizon](https://github.com/Calcium-Ion/new-api-horizon) | New API 高性能优化版 |
 
 ---
 
@@ -452,10 +439,10 @@ Token、Origin 校验和 PAT 契约见[用户鉴权与登录会话](./docs/authe
 
 | 资源 | 链接 |
 |------|------|
-| 📘 常见问题 | [FAQ](https://docs.newapi.pro/zh/docs/support/faq) |
-| 💬 社区交流 | [交流渠道](https://docs.newapi.pro/zh/docs/support/community-interaction) |
-| 🐛 反馈问题 | [问题反馈](https://docs.newapi.pro/zh/docs/support/feedback-issues) |
-| 📚 完整文档 | [官方文档](https://docs.newapi.pro/zh/docs) |
+| 📘 常见问题 | [FAQ](https://github.com/Isiah998/new-api/issues) |
+| 💬 社区交流 | [交流渠道](https://github.com/Isiah998/new-api/issues) |
+| 🐛 反馈问题 | [问题反馈](https://github.com/Isiah998/new-api/issues) |
+| 📚 完整文档 | [官方文档](https://github.com/Isiah998/new-api/tree/main/docs) |
 
 ### 🤝 贡献指南
 
@@ -470,11 +457,12 @@ Token、Origin 校验和 PAT 契约见[用户鉴权与登录会话](./docs/authe
 
 ## 📜 许可证
 
-本项目采用 [GNU Affero 通用公共许可证 v3.0 (AGPLv3)](./LICENSE) 授权。
+Qing API 是 [New API](https://github.com/QuantumNous/new-api) 的修改版本，New API 又基于 [One API](https://github.com/songquanpeng/one-api) 开发。本版本继续采用 [GNU Affero 通用公共许可证 v3.0（AGPLv3）](./LICENSE)授权。
 
-本项目为开源项目，在 [One API](https://github.com/songquanpeng/one-api)（MIT 许可证）的基础上进行二次开发。
-
-如果您所在的组织政策不允许使用 AGPLv3 许可的软件，或您希望规避 AGPLv3 的开源义务，请发送邮件至：[support@qingflow.com](mailto:support@qingflow.com)
+- 本 Qing API 版本的对应源代码发布于 [Isiah998/new-api](https://github.com/Isiah998/new-api)。
+- 既有版权声明及 New API 的附加署名条款保留在 [NOTICE](./NOTICE) 中。
+- 如果将修改版本作为网络服务运行，必须依照 AGPLv3 第 13 条向所有通过网络交互的用户提供获取对应源代码的明确入口。
+- Qing API 是本修改发行版的产品品牌；品牌重塑不改变上游贡献者的版权归属。
 
 ---
 
@@ -482,7 +470,7 @@ Token、Origin 校验和 PAT 契约见[用户鉴权与登录会话](./docs/authe
 
 <div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/qing-api&type=Date)](https://star-history.com/#Calcium-Ion/qing-api&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Isiah998/new-api&type=Date)](https://star-history.com/#Isiah998/new-api&Date)
 
 </div>
 
@@ -494,7 +482,7 @@ Token、Origin 校验和 PAT 契约见[用户鉴权与登录会话](./docs/authe
 
 如果这个项目对你有帮助，欢迎给我们一个 ⭐️ Star！
 
-**[官方文档](https://docs.newapi.pro/zh/docs)** • **[问题反馈](https://github.com/Calcium-Ion/qing-api/issues)** • **[最新发布](https://github.com/Calcium-Ion/qing-api/releases)**
+**[官方文档](https://github.com/Isiah998/new-api/tree/main/docs)** • **[问题反馈](https://github.com/Isiah998/new-api/issues)** • **[最新发布](https://github.com/Isiah998/new-api/releases)**
 
 <sub>Built with ❤️ by QingFlow</sub>
 

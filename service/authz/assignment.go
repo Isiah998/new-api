@@ -1,6 +1,6 @@
 package authz
 
-import "github.com/QingFlow/qing-api/common"
+import "github.com/Isiah998/new-api/common"
 
 // resolveSubjectRoles returns the role keys assigned to a subject. The mapping
 // is derived from the caller's system role.

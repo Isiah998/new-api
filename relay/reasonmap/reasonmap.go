@@ -3,7 +3,7 @@ package reasonmap
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/constant"
 )
 
 func ClaudeStopReasonToOpenAIFinishReason(stopReason string) string {

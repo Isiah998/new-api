@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/service"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/service"
 	"github.com/gin-gonic/gin"
 )
 

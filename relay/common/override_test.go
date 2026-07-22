@@ -6,11 +6,11 @@ import (
 	"reflect"
 	"testing"
 
-	common2 "github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/types"
+	common2 "github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/types"
 
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/setting/model_setting"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/setting/model_setting"
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/require"
 )

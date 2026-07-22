@@ -10,12 +10,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/logger"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/service"
-	"github.com/QingFlow/qing-api/setting/operation_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/logger"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/service"
+	"github.com/Isiah998/new-api/setting/operation_setting"
 
 	"github.com/bytedance/gopkg/util/gopool"
 

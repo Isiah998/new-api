@@ -4,7 +4,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/QingFlow/qing-api/setting/config"
+	"github.com/Isiah998/new-api/setting/config"
 )
 
 type ChatCompletionsToResponsesPolicy struct {

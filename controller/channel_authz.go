@@ -1,6 +1,6 @@
 package controller
 
-import "github.com/QingFlow/qing-api/model"
+import "github.com/Isiah998/new-api/model"
 
 func channelHasSensitiveChanges(channel *PatchChannel, origin *model.Channel, requestData map[string]any) bool {
 	if _, ok := requestData["type"]; ok && channel.Type != origin.Type {

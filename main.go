@@ -15,21 +15,21 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/controller"
-	"github.com/QingFlow/qing-api/i18n"
-	"github.com/QingFlow/qing-api/logger"
-	"github.com/QingFlow/qing-api/middleware"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/oauth"
-	perfmetrics "github.com/QingFlow/qing-api/pkg/perf_metrics"
-	"github.com/QingFlow/qing-api/relay"
-	"github.com/QingFlow/qing-api/router"
-	"github.com/QingFlow/qing-api/service"
-	"github.com/QingFlow/qing-api/service/authz"
-	_ "github.com/QingFlow/qing-api/setting/performance_setting"
-	"github.com/QingFlow/qing-api/setting/ratio_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/controller"
+	"github.com/Isiah998/new-api/i18n"
+	"github.com/Isiah998/new-api/logger"
+	"github.com/Isiah998/new-api/middleware"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/oauth"
+	perfmetrics "github.com/Isiah998/new-api/pkg/perf_metrics"
+	"github.com/Isiah998/new-api/relay"
+	"github.com/Isiah998/new-api/router"
+	"github.com/Isiah998/new-api/service"
+	"github.com/Isiah998/new-api/service/authz"
+	_ "github.com/Isiah998/new-api/setting/performance_setting"
+	"github.com/Isiah998/new-api/setting/ratio_setting"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gin-gonic/gin"
@@ -173,7 +173,7 @@ func main() {
 		common.SysLog(fmt.Sprintf("panic detected: %v", err))
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"error": gin.H{
-				"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Calcium-Ion/qing-api", err),
+				"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Isiah998/new-api", err),
 				"type":    "qing_api_panic",
 			},
 		})

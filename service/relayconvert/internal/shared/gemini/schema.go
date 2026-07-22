@@ -3,7 +3,7 @@ package gemini
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/dto"
+	"github.com/Isiah998/new-api/dto"
 )
 
 var geminiOpenAPISchemaAllowedFields = map[string]struct{}{

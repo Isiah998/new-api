@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
 
 	"github.com/glebarez/sqlite"
 	"gorm.io/driver/clickhouse"

@@ -6,8 +6,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/QingFlow/qing-api/common"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	"github.com/Isiah998/new-api/common"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"

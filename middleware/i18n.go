@@ -3,10 +3,10 @@ package middleware
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/i18n"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/i18n"
 )
 
 // I18n middleware detects and sets the language preference for the request

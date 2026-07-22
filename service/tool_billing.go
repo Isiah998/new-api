@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/setting/operation_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/setting/operation_setting"
 )
 
 // ToolCallUsage captures all tool call counts from a single request.

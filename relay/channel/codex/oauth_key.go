@@ -3,7 +3,7 @@ package codex
 import (
 	"errors"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 )
 
 type OAuthKey struct {

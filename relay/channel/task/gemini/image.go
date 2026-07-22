@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QingFlow/qing-api/constant"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	"github.com/Isiah998/new-api/constant"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
 	"github.com/gin-gonic/gin"
 )
 

@@ -6,9 +6,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	relayconstant "github.com/QingFlow/qing-api/relay/constant"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	relayconstant "github.com/Isiah998/new-api/relay/constant"
 	"github.com/gin-gonic/gin"
 )
 

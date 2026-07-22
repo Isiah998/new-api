@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2023-2026 QingFlow
+Copyright (C) 2023-2026 QuantumNous
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -14,7 +14,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-For commercial licensing, please contact support@qingflow.com
+For commercial licensing, please contact support@quantumnous.com
 */
 import { Link } from '@tanstack/react-router'
 import { Fragment, useMemo } from 'react'
@@ -41,12 +41,6 @@ interface FooterProps {
   copyright?: string
   className?: string
 }
-
-const QING_API_FOOTER_ATTRIBUTION_KEY = [
-  'footer',
-  'new' + 'api',
-  'projectAttributionSuffix',
-].join('.')
 
 function FooterLinkItem(props: { link: FooterLink }) {
   const { t } = useTranslation()
@@ -121,22 +115,33 @@ function LegalLinks(props: { leadingSeparator?: boolean }) {
   )
 }
 
-// inline=true returns just the inner span for composition in a parent flex
-// row. inline=false wraps in a centered/right-aligned div (default).
-function ProjectAttribution(props: { currentYear: number; inline?: boolean }) {
+// Keep the current-source offer visible for AGPL network use, while the
+// upstream link and notice preserve New API's attribution terms.
+function ProjectAttribution(props: { inline?: boolean }) {
   const { t } = useTranslation()
   const content = (
-    <span className='text-muted-foreground/45'>
-      &copy; {props.currentYear}{' '}
+    <span className='text-muted-foreground/45 flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 sm:justify-end'>
       <a
-        href='https://github.com/QingFlow/qing-api'
+        href='https://github.com/Isiah998/new-api'
         target='_blank'
         rel='noopener noreferrer'
         className='text-foreground/70 hover:text-foreground font-medium transition-colors'
       >
-        {t('Qing API')}
+        {t('Source code')}
       </a>
-      . {t(QING_API_FOOTER_ATTRIBUTION_KEY)}
+      <span aria-hidden='true'>·</span>
+      <a
+        href='https://github.com/QuantumNous/new-api'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='text-foreground/70 hover:text-foreground font-medium transition-colors'
+      >
+        {t('Based on New API')}
+      </a>
+      <span aria-hidden='true'>·</span>
+      <span>
+        {t('Frontend design and development by New API contributors.')}
+      </span>
     </span>
   )
   if (props.inline) {
@@ -170,15 +175,15 @@ export function Footer(props: FooterProps) {
         links: [
           {
             text: t('footer.columns.about.links.aboutProject'),
-            href: 'https://docs.newapi.pro/wiki/project-introduction/',
+            href: 'https://github.com/Isiah998/new-api#readme',
           },
           {
             text: t('footer.columns.about.links.contact'),
-            href: 'https://docs.newapi.pro/support/community-interaction/',
+            href: 'https://github.com/Isiah998/new-api/issues',
           },
           {
             text: t('footer.columns.about.links.features'),
-            href: 'https://docs.newapi.pro/wiki/features-introduction/',
+            href: 'https://github.com/Isiah998/new-api#-key-features',
           },
         ],
       },
@@ -187,15 +192,15 @@ export function Footer(props: FooterProps) {
         links: [
           {
             text: t('footer.columns.docs.links.quickStart'),
-            href: 'https://docs.newapi.pro/getting-started/',
+            href: 'https://github.com/Isiah998/new-api#-quick-start',
           },
           {
             text: t('footer.columns.docs.links.installation'),
-            href: 'https://docs.newapi.pro/installation/',
+            href: 'https://github.com/Isiah998/new-api#-deployment',
           },
           {
             text: t('footer.columns.docs.links.apiDocs'),
-            href: 'https://docs.newapi.pro/api/',
+            href: 'https://github.com/Isiah998/new-api/tree/main/docs/openapi',
           },
         ],
       },
@@ -211,8 +216,8 @@ export function Footer(props: FooterProps) {
             href: 'https://github.com/novicezk/midjourney-proxy',
           },
           {
-            text: t('footer.columns.related.links.qingApiKeyTool'),
-            href: 'https://github.com/Calcium-Ion/qing-api-key-tool',
+            text: t('footer.columns.related.links.newApiKeyTool'),
+            href: 'https://github.com/Calcium-Ion/new-api-key-tool',
           },
         ],
       },
@@ -238,7 +243,7 @@ export function Footer(props: FooterProps) {
             />
             <div className='border-border/60 text-muted-foreground/45 flex w-full flex-wrap items-center justify-center gap-x-3 gap-y-1 border-t pt-4 text-xs sm:w-auto sm:justify-end sm:border-t-0 sm:border-l sm:pt-0 sm:pl-5'>
               <LegalLinks />
-              <ProjectAttribution currentYear={currentYear} inline />
+              <ProjectAttribution inline />
             </div>
           </div>
         </div>
@@ -300,7 +305,7 @@ export function Footer(props: FooterProps) {
             </span>
             <LegalLinks leadingSeparator />
           </div>
-          <ProjectAttribution currentYear={currentYear} />
+          <ProjectAttribution />
         </div>
       </div>
     </footer>

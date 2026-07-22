@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/setting"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/setting"
 )
 
 func CheckSensitiveMessages(messages []dto.Message) ([]string, error) {

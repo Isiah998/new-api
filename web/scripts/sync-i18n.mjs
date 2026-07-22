@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2023-2026 QingFlow
+Copyright (C) 2023-2026 QuantumNous
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -14,7 +14,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-For commercial licensing, please contact support@qingflow.com
+For commercial licensing, please contact support@quantumnous.com
 */
 import fs from 'node:fs/promises'
 import path from 'node:path'
@@ -106,9 +106,9 @@ const BRAND_AND_LITERAL_KEYS = new Set([
   '"default": "us-central1", "claude-3-5-sonnet-20240620": "europe-west1"',
   'edit_this',
   'footer.columns.related.links.midjourney',
-  'footer.columns.related.links.qingApiKeyTool',
+  'footer.columns.related.links.newApiKeyTool',
   'my-status',
-  'qing-api-key-tool',
+  'new-api-key-tool',
   'price_xxx',
   'whsec_xxx',
 ])

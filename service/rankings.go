@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QingFlow/qing-api/model"
+	"github.com/Isiah998/new-api/model"
 )
 
 const (

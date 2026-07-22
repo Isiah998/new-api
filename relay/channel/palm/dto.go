@@ -1,6 +1,6 @@
 package palm
 
-import "github.com/QingFlow/qing-api/dto"
+import "github.com/Isiah998/new-api/dto"
 
 type PaLMChatMessage struct {
 	Author  string `json:"author"`

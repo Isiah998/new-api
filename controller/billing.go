@@ -1,10 +1,10 @@
 package controller
 
 import (
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/setting/operation_setting"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/setting/operation_setting"
+	"github.com/Isiah998/new-api/types"
 	"github.com/gin-gonic/gin"
 )
 

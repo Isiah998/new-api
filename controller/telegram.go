@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/middleware"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/service"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/middleware"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/service"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

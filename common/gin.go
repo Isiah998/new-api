@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/constant"
 	"github.com/pkg/errors"
 
 	"github.com/gin-gonic/gin"

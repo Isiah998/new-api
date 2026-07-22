@@ -1,6 +1,6 @@
 package vertex
 
-import "github.com/QingFlow/qing-api/common"
+import "github.com/Isiah998/new-api/common"
 
 func GetModelRegion(other string, localModelName string) string {
 	// if other is json string

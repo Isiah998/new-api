@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"runtime/debug"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,7 +17,7 @@ func RelayPanicRecover() gin.HandlerFunc {
 				common.SysLog(fmt.Sprintf("stacktrace from panic: %s", string(debug.Stack())))
 				c.JSON(http.StatusInternalServerError, gin.H{
 					"error": gin.H{
-						"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Calcium-Ion/qing-api", err),
+						"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Isiah998/new-api", err),
 						"type":    "qing_api_panic",
 					},
 				})

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/dto"
+	"github.com/Isiah998/new-api/dto"
 )
 
 type ChatToResponsesStreamEvent struct {

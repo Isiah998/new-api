@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/QingFlow/qing-api/common"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	"github.com/Isiah998/new-api/common"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
 	"github.com/stretchr/testify/require"
 )
 

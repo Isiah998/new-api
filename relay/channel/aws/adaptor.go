@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/relay/channel"
-	"github.com/QingFlow/qing-api/relay/channel/claude"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/service"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/relay/channel"
+	"github.com/Isiah998/new-api/relay/channel/claude"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/service"
+	"github.com/Isiah998/new-api/types"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 	"github.com/pkg/errors"
 

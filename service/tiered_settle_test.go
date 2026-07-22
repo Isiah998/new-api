@@ -5,9 +5,9 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/pkg/billingexpr"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/pkg/billingexpr"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
 	"github.com/shopspring/decimal"
 )
 

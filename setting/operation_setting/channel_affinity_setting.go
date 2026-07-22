@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/QingFlow/qing-api/setting/config"
+import "github.com/Isiah998/new-api/setting/config"
 
 type ChannelAffinityKeySource struct {
 	Type string `json:"type"` // context_int, context_string, request_header, gjson

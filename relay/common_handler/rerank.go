@@ -4,14 +4,14 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/logger"
-	"github.com/QingFlow/qing-api/relay/channel/xinference"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/service"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/logger"
+	"github.com/Isiah998/new-api/relay/channel/xinference"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/service"
+	"github.com/Isiah998/new-api/types"
 
 	"github.com/gin-gonic/gin"
 )

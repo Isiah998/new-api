@@ -1,8 +1,8 @@
 package model
 
 import (
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/setting/ratio_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/setting/ratio_setting"
 )
 
 func IsChannelEnabledForGroupModel(group string, modelName string, channelID int) bool {

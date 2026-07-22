@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	relayconstant "github.com/QingFlow/qing-api/relay/constant"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	relayconstant "github.com/Isiah998/new-api/relay/constant"
 
 	"github.com/gin-gonic/gin"
 )

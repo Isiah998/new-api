@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/model"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/model"
 	"github.com/alicebob/miniredis/v2"
 	"github.com/gin-gonic/gin"
 	"github.com/glebarez/sqlite"

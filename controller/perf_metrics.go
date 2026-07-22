@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	perfmetrics "github.com/QingFlow/qing-api/pkg/perf_metrics"
-	"github.com/QingFlow/qing-api/setting/ratio_setting"
+	perfmetrics "github.com/Isiah998/new-api/pkg/perf_metrics"
+	"github.com/Isiah998/new-api/setting/ratio_setting"
 
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"

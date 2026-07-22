@@ -8,12 +8,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/middleware"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/service"
-	passkeysvc "github.com/QingFlow/qing-api/service/passkey"
-	"github.com/QingFlow/qing-api/setting/system_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/middleware"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/service"
+	passkeysvc "github.com/Isiah998/new-api/service/passkey"
+	"github.com/Isiah998/new-api/setting/system_setting"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-webauthn/webauthn/protocol"

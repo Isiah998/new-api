@@ -1,11 +1,11 @@
 package router
 
 import (
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/controller"
-	"github.com/QingFlow/qing-api/middleware"
-	"github.com/QingFlow/qing-api/relay"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/controller"
+	"github.com/Isiah998/new-api/middleware"
+	"github.com/Isiah998/new-api/relay"
+	"github.com/Isiah998/new-api/types"
 
 	"github.com/gin-gonic/gin"
 )

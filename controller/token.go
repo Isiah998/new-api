@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/i18n"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/setting/operation_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/i18n"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/setting/operation_setting"
 
 	"github.com/gin-gonic/gin"
 )

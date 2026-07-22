@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/dto"
-	relaymedia "github.com/QingFlow/qing-api/service/relayconvert/internal/media"
-	sharedclaude "github.com/QingFlow/qing-api/service/relayconvert/internal/shared/claude"
-	"github.com/QingFlow/qing-api/setting/model_setting"
-	"github.com/QingFlow/qing-api/setting/reasoning"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/dto"
+	relaymedia "github.com/Isiah998/new-api/service/relayconvert/internal/media"
+	sharedclaude "github.com/Isiah998/new-api/service/relayconvert/internal/shared/claude"
+	"github.com/Isiah998/new-api/setting/model_setting"
+	"github.com/Isiah998/new-api/setting/reasoning"
 	"github.com/gin-gonic/gin"
 )
 

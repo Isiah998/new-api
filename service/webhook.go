@@ -9,9 +9,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/setting/system_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/setting/system_setting"
 )
 
 // WebhookPayload webhook 通知的负载数据

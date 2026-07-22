@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/QingFlow/qing-api/controller"
-	"github.com/QingFlow/qing-api/middleware"
+	"github.com/Isiah998/new-api/controller"
+	"github.com/Isiah998/new-api/middleware"
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
 )

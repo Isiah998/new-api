@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2023-2026 QingFlow
+Copyright (C) 2023-2026 QuantumNous
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -14,7 +14,7 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-For commercial licensing, please contact support@qingflow.com
+For commercial licensing, please contact support@quantumnous.com
 */
 import { useQuery } from '@tanstack/react-query'
 import { Construction } from 'lucide-react'
@@ -47,35 +47,35 @@ function EmptyAboutState() {
         </div>
         <div className='space-y-4 text-sm'>
           <p>
-            {t('Qing API Project Repository:')}{' '}
+            {t('Qing API source code:')}{' '}
             <a
-              href='https://github.com/QingFlow/qing-api'
+              href='https://github.com/Isiah998/new-api'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:underline'
             >
-              {t('https://github.com/QingFlow/qing-api')}
+              https://github.com/Isiah998/new-api
             </a>
           </p>
           <p className='text-muted-foreground'>
             <a
-              href='https://github.com/QingFlow/qing-api'
+              href='https://github.com/Isiah998/new-api'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:underline'
             >
               {t('Qing API')}
             </a>{' '}
-            © {currentYear}{' '}
+            © {currentYear} QingFlow {t('| Based on')}{' '}
             <a
-              href='https://github.com/QingFlow'
+              href='https://github.com/QuantumNous/new-api'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:underline'
             >
-              {t('QingFlow')}
+              New API
             </a>{' '}
-            {t('| Based on')}{' '}
+            © QuantumNous {t('| Based on')}{' '}
             <a
               href='https://github.com/songquanpeng/one-api'
               target='_blank'
@@ -97,7 +97,7 @@ function EmptyAboutState() {
           <p className='text-muted-foreground'>
             {t('This project must be used in compliance with the')}{' '}
             <a
-              href='https://github.com/QingFlow/qing-api/blob/main/LICENSE'
+              href='https://github.com/Isiah998/new-api/blob/main/LICENSE'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:underline'

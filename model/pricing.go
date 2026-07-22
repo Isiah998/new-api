@@ -7,12 +7,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/setting/billing_setting"
-	"github.com/QingFlow/qing-api/setting/ratio_setting"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/setting/billing_setting"
+	"github.com/Isiah998/new-api/setting/ratio_setting"
+	"github.com/Isiah998/new-api/types"
 )
 
 type Pricing struct {

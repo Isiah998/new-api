@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/logger"
-	"github.com/QingFlow/qing-api/setting/system_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/logger"
+	"github.com/Isiah998/new-api/setting/system_setting"
 
 	"golang.org/x/net/proxy"
 )

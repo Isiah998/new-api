@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
 )
 
 // ParseVeoDurationSeconds extracts durationSeconds from metadata.

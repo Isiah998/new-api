@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/setting/system_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/setting/system_setting"
 
 	"github.com/go-webauthn/webauthn/protocol"
 	webauthn "github.com/go-webauthn/webauthn/webauthn"

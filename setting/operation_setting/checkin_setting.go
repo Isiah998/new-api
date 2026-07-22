@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/QingFlow/qing-api/setting/config"
+import "github.com/Isiah998/new-api/setting/config"
 
 // CheckinSetting 签到功能配置
 type CheckinSetting struct {

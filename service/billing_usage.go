@@ -3,7 +3,7 @@ package service
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/dto"
+	"github.com/Isiah998/new-api/dto"
 )
 
 const (

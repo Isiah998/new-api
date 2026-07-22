@@ -3,7 +3,7 @@ package controller
 import (
 	"net/http"
 
-	"github.com/QingFlow/qing-api/model"
+	"github.com/Isiah998/new-api/model"
 
 	"github.com/gin-gonic/gin"
 )

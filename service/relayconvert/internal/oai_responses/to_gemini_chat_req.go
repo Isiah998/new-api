@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	relaymedia "github.com/QingFlow/qing-api/service/relayconvert/internal/media"
-	relaymeta "github.com/QingFlow/qing-api/service/relayconvert/internal/meta"
-	sharedgemini "github.com/QingFlow/qing-api/service/relayconvert/internal/shared/gemini"
-	"github.com/QingFlow/qing-api/setting/model_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	relaymedia "github.com/Isiah998/new-api/service/relayconvert/internal/media"
+	relaymeta "github.com/Isiah998/new-api/service/relayconvert/internal/meta"
+	sharedgemini "github.com/Isiah998/new-api/service/relayconvert/internal/shared/gemini"
+	"github.com/Isiah998/new-api/setting/model_setting"
 	"github.com/gin-gonic/gin"
 )
 

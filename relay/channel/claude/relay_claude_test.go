@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/service/relayconvert"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/service/relayconvert"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

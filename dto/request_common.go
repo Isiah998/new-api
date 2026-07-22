@@ -1,7 +1,7 @@
 package dto
 
 import (
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/types"
 	"github.com/gin-gonic/gin"
 )
 

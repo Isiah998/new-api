@@ -1,6 +1,6 @@
 package dto
 
-import "github.com/QingFlow/qing-api/types"
+import "github.com/Isiah998/new-api/types"
 
 const (
 	RealtimeEventTypeError              = "error"

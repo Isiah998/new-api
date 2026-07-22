@@ -3,7 +3,7 @@ package common
 import (
 	"io"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 )
 
 // NewOutboundJSONBody wraps the already-marshaled upstream request body into a

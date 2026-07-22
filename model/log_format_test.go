@@ -3,7 +3,7 @@ package model
 import (
 	"testing"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 
 	"github.com/stretchr/testify/require"
 )

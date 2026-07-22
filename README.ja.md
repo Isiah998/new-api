@@ -15,30 +15,17 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Calcium-Ion/qing-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Calcium-Ion/qing-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/Isiah998/new-api/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Isiah998/new-api?color=brightgreen" alt="license">
   </a><!--
-  --><a href="https://github.com/Calcium-Ion/qing-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Calcium-Ion/qing-api?color=brightgreen&include_prereleases" alt="release">
+  --><a href="https://github.com/Isiah998/new-api/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Isiah998/new-api?color=brightgreen&include_prereleases" alt="release">
   </a><!--
-  --><a href="https://hub.docker.com/r/CalciumIon/qing-api">
-    <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
+  --><a href="https://github.com/Isiah998/new-api/pkgs/container/qing-api">
+    <img src="https://img.shields.io/badge/container-ghcr.io-blue" alt="docker">
   </a><!--
-  --><a href="https://goreportcard.com/report/github.com/Calcium-Ion/qing-api">
-    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/qing-api" alt="GoReportCard">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://trendshift.io/repositories/20180" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QingFlow%2Fqing-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
-  </a>
-  <br>
-  <a href="https://hellogithub.com/repository/QingFlow/qing-api" target="_blank">
-    <img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=539ac4217e69431684ad4a0bab768811&claim_uid=tbFPfKIDHpc4TzR" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" />
-  </a><!--
-  --><a href="https://www.producthunt.com/products/qing-api/launches/qing-api?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-qing-api" target="_blank" rel="noopener noreferrer">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="Qing API - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+  --><a href="https://goreportcard.com/report/github.com/Isiah998/new-api">
+    <img src="https://goreportcard.com/badge/github.com/Isiah998/new-api" alt="GoReportCard">
   </a>
 </p>
 
@@ -111,7 +98,7 @@
 
 ```bash
 # プロジェクトをクローン
-git clone https://github.com/QingFlow/qing-api.git
+git clone https://github.com/Isiah998/new-api.git
 cd qing-api
 
 # docker-compose.yml 設定を編集
@@ -126,14 +113,14 @@ docker-compose up -d
 
 ```bash
 # 最新のイメージをプル
-docker pull calciumion/qing-api:latest
+docker pull ghcr.io/isiah998/qing-api:latest
 
 # SQLiteを使用（デフォルト）
 docker run --name qing-api -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 
 # MySQLを使用
 docker run --name qing-api -d --restart always \
@@ -141,7 +128,7 @@ docker run --name qing-api -d --restart always \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 > **💡 ヒント:** `-v ./data:/data` は現在のディレクトリの `data` フォルダにデータを保存します。絶対パスに変更することもできます：`-v /your/custom/path:/data`
@@ -155,7 +142,7 @@ docker run --name qing-api -d --restart always \
 > [!WARNING]
 > 本プロジェクトを公衆向け生成 AI サービスまたは API 再販サービスとして運営する場合、ユーザーは届出、コンテンツセキュリティ、本人確認、ログ保持、税務、決済、上流認可などの必要なコンプライアンス義務を先に完了してください。
 
-📖 その他のデプロイ方法については[デプロイガイド](https://docs.newapi.pro/ja/docs/installation)を参照してください。
+📖 その他のデプロイ方法については[デプロイガイド](https://github.com/Isiah998/new-api/tree/main/docs/installation)を参照してください。
 
 ---
 
@@ -163,7 +150,7 @@ docker run --name qing-api -d --restart always \
 
 <div align="center">
 
-### 📖 [公式ドキュメント](https://docs.newapi.pro/ja/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QingFlow/qing-api)
+### 📖 [公式ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Isiah998/new-api)
 
 </div>
 
@@ -171,17 +158,17 @@ docker run --name qing-api -d --restart always \
 
 | カテゴリ | リンク |
 |------|------|
-| 🚀 デプロイガイド | [インストールドキュメント](https://docs.newapi.pro/ja/docs/installation) |
-| ⚙️ 環境設定 | [環境変数](https://docs.newapi.pro/ja/docs/installation/config-maintenance/environment-variables) |
-| 📡 APIドキュメント | [APIドキュメント](https://docs.newapi.pro/ja/docs/api) |
-| ❓ よくある質問 | [FAQ](https://docs.newapi.pro/ja/docs/support/faq) |
-| 💬 コミュニティ交流 | [交流チャネル](https://docs.newapi.pro/ja/docs/support/community-interaction) |
+| 🚀 デプロイガイド | [インストールドキュメント](https://github.com/Isiah998/new-api/tree/main/docs/installation) |
+| ⚙️ 環境設定 | [環境変数](https://github.com/Isiah998/new-api/tree/main/docs/installation) |
+| 📡 APIドキュメント | [APIドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
+| ❓ よくある質問 | [FAQ](https://github.com/Isiah998/new-api/issues) |
+| 💬 コミュニティ交流 | [交流チャネル](https://github.com/Isiah998/new-api/issues) |
 
 ---
 
 ## ✨ 主な機能
 
-> 詳細な機能については[機能説明](https://docs.newapi.pro/ja/docs/guide/wiki/basic-concepts/features-introduction)を参照してください。
+> 詳細な機能については[機能説明](https://github.com/Isiah998/new-api/tree/main/docs)を参照してください。
 
 ### 🎨 コア機能
 
@@ -206,18 +193,18 @@ docker run --name qing-api -d --restart always \
 - 🤖 LinuxDO認証ログイン
 - 📱 Telegram認証ログイン
 - 🔑 OIDC統一認証
-- 🔍 Key使用量クォータ照会（[qing-api-key-tool](https://github.com/Calcium-Ion/qing-api-key-tool)と併用）
+- 🔍 Key使用量クォータ照会（[new-api-key-tool](https://github.com/Calcium-Ion/new-api-key-tool)と併用）
 
 
 
 ### 🚀 高度な機能
 
 **APIフォーマットサポート:**
-- ⚡ [OpenAI Responses](https://docs.newapi.pro/ja/docs/api/ai-model/chat/openai/create-response)
-- ⚡ [OpenAI Realtime API](https://docs.newapi.pro/ja/docs/api/ai-model/realtime/create-realtime-session)（Azureを含む）
-- ⚡ [Claude Messages](https://docs.newapi.pro/ja/docs/api/ai-model/chat/create-message)
-- ⚡ [Google Gemini](https://doc.qingapi.pro/ja/api/google-gemini-chat)
-- 🔄 [Rerankモデル](https://docs.newapi.pro/ja/docs/api/ai-model/rerank/create-rerank)（Cohere、Jina）
+- ⚡ [OpenAI Responses](https://github.com/Isiah998/new-api/tree/main/docs)
+- ⚡ [OpenAI Realtime API](https://github.com/Isiah998/new-api/tree/main/docs)（Azureを含む）
+- ⚡ [Claude Messages](https://github.com/Isiah998/new-api/tree/main/docs)
+- ⚡ [Google Gemini](https://github.com/Isiah998/new-api/tree/main/docs)
+- 🔄 [Rerankモデル](https://github.com/Isiah998/new-api/tree/main/docs)（Cohere、Jina）
 
 **インテリジェントルーティング:**
 - ⚖️ チャネル重み付けランダム
@@ -260,17 +247,17 @@ docker run --name qing-api -d --restart always \
 
 ## 🤖 モデルサポート
 
-> 詳細については[APIドキュメント - ゲートウェイインターフェース](https://docs.newapi.pro/ja/docs/api)
+> 詳細については[APIドキュメント - ゲートウェイインターフェース](https://github.com/Isiah998/new-api/tree/main/docs)
 
 | モデルタイプ | 説明 | ドキュメント |
 |---------|------|------|
-| 🤖 OpenAI-Compatible | OpenAI互換モデル | [ドキュメント](https://docs.newapi.pro/ja/docs/api/ai-model/chat/openai/createchatcompletion) |
-| 🤖 OpenAI Responses | OpenAI Responsesフォーマット | [ドキュメント](https://docs.newapi.pro/ja/docs/api/ai-model/chat/openai/createresponse) |
-| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [ドキュメント](https://doc.qingapi.pro/api/midjourney-proxy-image) |
-| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [ドキュメント](https://doc.qingapi.pro/api/suno-music) |
-| 🔄 Rerank | Cohere、Jina | [ドキュメント](https://docs.newapi.pro/ja/docs/api/ai-model/rerank/creatererank) |
-| 💬 Claude | Messagesフォーマット | [ドキュメント](https://docs.newapi.pro/ja/docs/api/ai-model/chat/createmessage) |
-| 🌐 Gemini | Google Geminiフォーマット | [ドキュメント](https://docs.newapi.pro/ja/docs/api/ai-model/chat/gemini/geminirelayv1beta) |
+| 🤖 OpenAI-Compatible | OpenAI互換モデル | [ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🤖 OpenAI Responses | OpenAI Responsesフォーマット | [ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🎨 Midjourney-Proxy | [Midjourney-Proxy(Plus)](https://github.com/novicezk/midjourney-proxy) | [ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🎵 Suno-API | [Suno API](https://github.com/Suno-API/Suno-API) | [ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🔄 Rerank | Cohere、Jina | [ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 💬 Claude | Messagesフォーマット | [ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
+| 🌐 Gemini | Google Geminiフォーマット | [ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
 | 🔧 Dify | ChatFlowモード | - |
 | 🎯 カスタム上流 | 合法的に許可された上流エンドポイントの設定をサポート | - |
 
@@ -279,16 +266,16 @@ docker run --name qing-api -d --restart always \
 <details>
 <summary>完全なインターフェースリストを表示</summary>
 
-- [チャットインターフェース (Chat Completions)](https://docs.newapi.pro/ja/docs/api/ai-model/chat/openai/createchatcompletion)
-- [レスポンスインターフェース (Responses)](https://docs.newapi.pro/ja/docs/api/ai-model/chat/openai/createresponse)
-- [イメージインターフェース (Image)](https://docs.newapi.pro/ja/docs/api/ai-model/images/openai/post-v1-images-generations)
-- [オーディオインターフェース (Audio)](https://docs.newapi.pro/ja/docs/api/ai-model/audio/openai/create-transcription)
-- [ビデオインターフェース (Video)](https://docs.newapi.pro/ja/docs/api/ai-model/audio/openai/createspeech)
-- [エンベッドインターフェース (Embeddings)](https://docs.newapi.pro/ja/docs/api/ai-model/embeddings/createembedding)
-- [再ランク付けインターフェース (Rerank)](https://docs.newapi.pro/ja/docs/api/ai-model/rerank/creatererank)
-- [リアルタイム対話インターフェース (Realtime)](https://docs.newapi.pro/ja/docs/api/ai-model/realtime/createrealtimesession)
-- [Claudeチャット](https://docs.newapi.pro/ja/docs/api/ai-model/chat/createmessage)
-- [Google Geminiチャット](https://docs.newapi.pro/ja/docs/api/ai-model/chat/gemini/geminirelayv1beta)
+- [チャットインターフェース (Chat Completions)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [レスポンスインターフェース (Responses)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [イメージインターフェース (Image)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [オーディオインターフェース (Audio)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [ビデオインターフェース (Video)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [エンベッドインターフェース (Embeddings)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [再ランク付けインターフェース (Rerank)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [リアルタイム対話インターフェース (Realtime)](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Claudeチャット](https://github.com/Isiah998/new-api/tree/main/docs)
+- [Google Geminiチャット](https://github.com/Isiah998/new-api/tree/main/docs)
 
 </details>
 
@@ -297,7 +284,7 @@ docker run --name qing-api -d --restart always \
 ## 🚢 デプロイ
 
 > [!TIP]
-> **最新のDockerイメージ:** `calciumion/qing-api:latest`
+> **最新のDockerイメージ:** `ghcr.io/isiah998/qing-api:latest`
 
 ### 📋 デプロイ要件
 
@@ -340,7 +327,7 @@ docker run --name qing-api -d --restart always \
 | `PYROSCOPE_BLOCK_RATE` | Pyroscope blockサンプリング率 | `5` |
 | `HOSTNAME` | Pyroscope用のホスト名タグ | `qing-api` |
 
-📖 **完全な設定:** [環境変数ドキュメント](https://docs.newapi.pro/ja/docs/installation/config-maintenance/environment-variables)
+📖 **完全な設定:** [環境変数ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs/installation)
 
 </details>
 
@@ -351,7 +338,7 @@ docker run --name qing-api -d --restart always \
 
 ```bash
 # プロジェクトをクローン
-git clone https://github.com/QingFlow/qing-api.git
+git clone https://github.com/Isiah998/new-api.git
 cd qing-api
 
 # 設定を編集
@@ -372,7 +359,7 @@ docker run --name qing-api -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 **MySQLを使用:**
@@ -382,7 +369,7 @@ docker run --name qing-api -d --restart always \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/qing-api:latest
+  ghcr.io/isiah998/qing-api:latest
 ```
 
 > **💡 パス説明:**
@@ -441,8 +428,8 @@ Token、Origin 検証、PAT の契約については[ユーザー認証とログ
 
 | プロジェクト | 説明 |
 |------|------|
-| [qing-api-key-tool](https://github.com/Calcium-Ion/qing-api-key-tool) | キー使用量クォータ照会ツール |
-| [qing-api-horizon](https://github.com/Calcium-Ion/qing-api-horizon) | Qing API高性能最適化版 |
+| [new-api-key-tool](https://github.com/Calcium-Ion/new-api-key-tool) | キー使用量クォータ照会ツール |
+| [new-api-horizon](https://github.com/Calcium-Ion/new-api-horizon) | New API高性能最適化版 |
 
 ---
 
@@ -452,10 +439,10 @@ Token、Origin 検証、PAT の契約については[ユーザー認証とログ
 
 | リソース | リンク |
 |------|------|
-| 📘 よくある質問 | [FAQ](https://docs.newapi.pro/ja/docs/support/faq) |
-| 💬 コミュニティ交流 | [交流チャネル](https://docs.newapi.pro/ja/docs/support/community-interaction) |
-| 🐛 問題のフィードバック | [問題フィードバック](https://docs.newapi.pro/ja/docs/support/feedback-issues) |
-| 📚 完全なドキュメント | [公式ドキュメント](https://docs.newapi.pro/ja/docs) |
+| 📘 よくある質問 | [FAQ](https://github.com/Isiah998/new-api/issues) |
+| 💬 コミュニティ交流 | [交流チャネル](https://github.com/Isiah998/new-api/issues) |
+| 🐛 問題のフィードバック | [問題フィードバック](https://github.com/Isiah998/new-api/issues) |
+| 📚 完全なドキュメント | [公式ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs) |
 
 ### 🤝 貢献ガイド
 
@@ -470,11 +457,12 @@ Token、Origin 検証、PAT の契約については[ユーザー認証とログ
 
 ## 📜 ライセンス
 
-このプロジェクトは [GNU Affero General Public License v3.0 (AGPLv3)](./LICENSE) の下でライセンスされています。
+Qing API は [New API](https://github.com/QuantumNous/new-api) の改変版であり、New API は [One API](https://github.com/songquanpeng/one-api) を基に開発されています。本バージョンも [GNU Affero General Public License v3.0（AGPLv3）](./LICENSE)で公開されます。
 
-本プロジェクトは、[One API](https://github.com/songquanpeng/one-api)（MITライセンス）をベースに開発されたオープンソースプロジェクトです。
-
-お客様の組織のポリシーがAGPLv3ライセンスのソフトウェアの使用を許可していない場合、またはAGPLv3のオープンソース義務を回避したい場合は、こちらまでお問い合わせください：[support@qingflow.com](mailto:support@qingflow.com)
+- この Qing API バージョンの対応ソースコードは [Isiah998/new-api](https://github.com/Isiah998/new-api) で公開されています。
+- 既存の著作権表示および New API の追加帰属条件は [NOTICE](./NOTICE) に保持されています。
+- 改変版をネットワークサービスとして運用する場合、AGPLv3 第13条に従い、ネットワーク経由で利用するすべてのユーザーに対応ソースコードの取得手段を提示する必要があります。
+- Qing API はこの改変ディストリビューションの製品ブランドであり、ブランド変更によって上流貢献者の著作権帰属が置き換わることはありません。
 
 ---
 
@@ -482,7 +470,7 @@ Token、Origin 検証、PAT の契約については[ユーザー認証とログ
 
 <div align="center">
 
-[![スター履歴チャート](https://api.star-history.com/svg?repos=Calcium-Ion/qing-api&type=Date)](https://star-history.com/#Calcium-Ion/qing-api&Date)
+[![スター履歴チャート](https://api.star-history.com/svg?repos=Isiah998/new-api&type=Date)](https://star-history.com/#Isiah998/new-api&Date)
 
 </div>
 
@@ -494,7 +482,7 @@ Token、Origin 検証、PAT の契約については[ユーザー認証とログ
 
 このプロジェクトがあなたのお役に立てたなら、ぜひ ⭐️ スターをください！
 
-**[公式ドキュメント](https://docs.newapi.pro/ja/docs)** • **[問題フィードバック](https://github.com/Calcium-Ion/qing-api/issues)** • **[最新リリース](https://github.com/Calcium-Ion/qing-api/releases)**
+**[公式ドキュメント](https://github.com/Isiah998/new-api/tree/main/docs)** • **[問題フィードバック](https://github.com/Isiah998/new-api/issues)** • **[最新リリース](https://github.com/Isiah998/new-api/releases)**
 
 <sub>❤️ で構築された QingFlow</sub>
 

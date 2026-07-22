@@ -7,10 +7,10 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/setting/system_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/setting/system_setting"
 )
 
 func NotifyRootUser(t string, subject string, content string) {

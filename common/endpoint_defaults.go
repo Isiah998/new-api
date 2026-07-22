@@ -1,6 +1,6 @@
 package common
 
-import "github.com/QingFlow/qing-api/constant"
+import "github.com/Isiah998/new-api/constant"
 
 // EndpointInfo 描述单个端点的默认请求信息
 // path: 上游路径

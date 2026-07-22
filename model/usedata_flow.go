@@ -3,7 +3,7 @@ package model
 import (
 	"fmt"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 	"gorm.io/gorm"
 )
 

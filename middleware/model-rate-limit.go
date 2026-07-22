@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/common/limiter"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/common/limiter"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/setting"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v8"

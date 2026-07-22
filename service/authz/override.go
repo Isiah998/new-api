@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/model"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/model"
 	"github.com/casbin/casbin/v2"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"

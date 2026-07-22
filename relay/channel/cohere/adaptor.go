@@ -6,11 +6,11 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/relay/channel"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/relay/constant"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/relay/channel"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/relay/constant"
+	"github.com/Isiah998/new-api/types"
 
 	"github.com/gin-gonic/gin"
 )

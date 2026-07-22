@@ -4,12 +4,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/dto"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	relaymeta "github.com/QingFlow/qing-api/service/relayconvert/internal/meta"
-	"github.com/QingFlow/qing-api/setting/model_setting"
-	"github.com/QingFlow/qing-api/setting/reasoning"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/dto"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	relaymeta "github.com/Isiah998/new-api/service/relayconvert/internal/meta"
+	"github.com/Isiah998/new-api/setting/model_setting"
+	"github.com/Isiah998/new-api/setting/reasoning"
 )
 
 var SupportedMimeTypes = map[string]bool{

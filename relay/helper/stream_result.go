@@ -1,7 +1,7 @@
 package helper
 
 import (
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
 )
 
 // StreamResult is passed to each dataHandler invocation, providing methods

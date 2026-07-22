@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/logger"
+	"github.com/Isiah998/new-api/logger"
 	"github.com/gin-gonic/gin"
 )
 

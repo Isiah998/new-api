@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/QingFlow/qing-api/setting/config"
+	"github.com/Isiah998/new-api/setting/config"
 )
 
 // ---------------------------------------------------------------------------

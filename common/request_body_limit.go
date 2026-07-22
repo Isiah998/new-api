@@ -1,6 +1,6 @@
 package common
 
-import "github.com/QingFlow/qing-api/constant"
+import "github.com/Isiah998/new-api/constant"
 
 const defaultAnonymousRequestBodyLimitKB = 512
 

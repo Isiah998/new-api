@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/types"
 )
 
 type TextConverterQuality string

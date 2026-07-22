@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/setting/console_setting"
+	"github.com/Isiah998/new-api/setting/console_setting"
 
 	"github.com/gin-gonic/gin"
 	"golang.org/x/sync/errgroup"

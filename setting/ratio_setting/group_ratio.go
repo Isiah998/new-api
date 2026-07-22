@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/setting/config"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/setting/config"
+	"github.com/Isiah998/new-api/types"
 )
 
 var defaultGroupRatio = map[string]float64{

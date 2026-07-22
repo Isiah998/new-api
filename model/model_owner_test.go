@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
 	"github.com/stretchr/testify/require"
 )
 

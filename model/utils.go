@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
+	"github.com/Isiah998/new-api/common"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"gorm.io/gorm"

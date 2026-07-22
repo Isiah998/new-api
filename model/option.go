@@ -5,13 +5,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/setting"
-	"github.com/QingFlow/qing-api/setting/config"
-	"github.com/QingFlow/qing-api/setting/operation_setting"
-	"github.com/QingFlow/qing-api/setting/performance_setting"
-	"github.com/QingFlow/qing-api/setting/ratio_setting"
-	"github.com/QingFlow/qing-api/setting/system_setting"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/setting"
+	"github.com/Isiah998/new-api/setting/config"
+	"github.com/Isiah998/new-api/setting/operation_setting"
+	"github.com/Isiah998/new-api/setting/performance_setting"
+	"github.com/Isiah998/new-api/setting/ratio_setting"
+	"github.com/Isiah998/new-api/setting/system_setting"
 	"gorm.io/gorm"
 )
 

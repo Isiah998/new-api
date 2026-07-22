@@ -3,12 +3,12 @@ package controller
 import (
 	"strconv"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/constant"
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/model"
-	"github.com/QingFlow/qing-api/relay"
-	"github.com/QingFlow/qing-api/types"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/constant"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/model"
+	"github.com/Isiah998/new-api/relay"
+	"github.com/Isiah998/new-api/types"
 
 	"github.com/gin-gonic/gin"
 )

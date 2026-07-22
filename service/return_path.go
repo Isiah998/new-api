@@ -3,7 +3,7 @@ package service
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/setting/system_setting"
+	"github.com/Isiah998/new-api/setting/system_setting"
 )
 
 func PaymentReturnURL(suffix string) string {

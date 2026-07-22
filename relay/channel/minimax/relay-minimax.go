@@ -3,10 +3,10 @@ package minimax
 import (
 	"fmt"
 
-	channelconstant "github.com/QingFlow/qing-api/constant"
-	relaycommon "github.com/QingFlow/qing-api/relay/common"
-	"github.com/QingFlow/qing-api/relay/constant"
-	"github.com/QingFlow/qing-api/types"
+	channelconstant "github.com/Isiah998/new-api/constant"
+	relaycommon "github.com/Isiah998/new-api/relay/common"
+	"github.com/Isiah998/new-api/relay/constant"
+	"github.com/Isiah998/new-api/types"
 )
 
 func GetRequestURL(info *relaycommon.RelayInfo) (string, error) {

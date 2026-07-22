@@ -1,6 +1,6 @@
 package system_setting
 
-import "github.com/QingFlow/qing-api/setting/config"
+import "github.com/Isiah998/new-api/setting/config"
 
 type OIDCSettings struct {
 	Enabled               bool   `json:"enabled"`

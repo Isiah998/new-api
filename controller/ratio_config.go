@@ -3,7 +3,7 @@ package controller
 import (
 	"net/http"
 
-	"github.com/QingFlow/qing-api/setting/ratio_setting"
+	"github.com/Isiah998/new-api/setting/ratio_setting"
 
 	"github.com/gin-gonic/gin"
 )

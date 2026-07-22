@@ -4,8 +4,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/QingFlow/qing-api/common"
-	"github.com/QingFlow/qing-api/pkg/billingexpr"
+	"github.com/Isiah998/new-api/common"
+	"github.com/Isiah998/new-api/pkg/billingexpr"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -16,7 +16,7 @@ version: '3.4' # For compatibility with older Docker versions
 
 services:
   qing-api:
-    image: calciumion/qing-api:latest
+    image: ghcr.io/isiah998/qing-api:latest
     container_name: qing-api
     restart: always
     command: --log-dir /app/logs

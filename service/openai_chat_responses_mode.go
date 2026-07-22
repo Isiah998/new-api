@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/QingFlow/qing-api/service/relayconvert"
-	"github.com/QingFlow/qing-api/setting/model_setting"
+	"github.com/Isiah998/new-api/service/relayconvert"
+	"github.com/Isiah998/new-api/setting/model_setting"
 )
 
 func ShouldChatCompletionsUseResponsesPolicy(policy model_setting.ChatCompletionsToResponsesPolicy, channelID int, channelType int, model string) bool {

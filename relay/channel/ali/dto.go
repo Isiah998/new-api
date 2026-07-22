@@ -3,9 +3,9 @@ package ali
 import (
 	"strings"
 
-	"github.com/QingFlow/qing-api/dto"
-	"github.com/QingFlow/qing-api/logger"
-	"github.com/QingFlow/qing-api/service"
+	"github.com/Isiah998/new-api/dto"
+	"github.com/Isiah998/new-api/logger"
+	"github.com/Isiah998/new-api/service"
 	"github.com/gin-gonic/gin"
 )
 
