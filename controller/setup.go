@@ -1,19 +1,27 @@
 package controller
 
 import (
+	"crypto/subtle"
+	"net"
+	"net/http"
+	"os"
+	"strings"
+	"sync"
 	"time"
 
 	"github.com/Isiah998/new-api/common"
 	"github.com/Isiah998/new-api/constant"
 	"github.com/Isiah998/new-api/model"
-	"github.com/Isiah998/new-api/setting/operation_setting"
 	"github.com/gin-gonic/gin"
 )
 
+var setupMu sync.Mutex
+
 type Setup struct {
-	Status       bool   `json:"status"`
-	RootInit     bool   `json:"root_init"`
-	DatabaseType string `json:"database_type"`
+	Status             bool   `json:"status"`
+	RootInit           bool   `json:"root_init"`
+	DatabaseType       string `json:"database_type"`
+	SetupTokenRequired bool   `json:"setup_token_required"`
 }
 
 type SetupRequest struct {
@@ -22,6 +30,7 @@ type SetupRequest struct {
 	ConfirmPassword    string `json:"confirmPassword"`
 	SelfUseModeEnabled bool   `json:"SelfUseModeEnabled"`
 	DemoSiteEnabled    bool   `json:"DemoSiteEnabled"`
+	SetupToken         string `json:"setupToken"`
 }
 
 func GetSetup(c *gin.Context) {
@@ -37,6 +46,7 @@ func GetSetup(c *gin.Context) {
 	}
 	setup.RootInit = model.RootUserExists()
 	setup.DatabaseType = string(common.MainDatabaseType())
+	setup.SetupTokenRequired = strings.TrimSpace(os.Getenv("SETUP_TOKEN")) != ""
 	c.JSON(200, gin.H{
 		"success": true,
 		"data":    setup,
@@ -44,6 +54,9 @@ func GetSetup(c *gin.Context) {
 }
 
 func PostSetup(c *gin.Context) {
+	setupMu.Lock()
+	defer setupMu.Unlock()
+
 	// Check if setup is already completed
 	if constant.Setup {
 		c.JSON(200, gin.H{
@@ -55,6 +68,7 @@ func PostSetup(c *gin.Context) {
 
 	// Check if root user already exists
 	rootExists := model.RootUserExists()
+	var root *model.User
 
 	var req SetupRequest
 	err := c.ShouldBindJSON(&req)
@@ -66,13 +80,26 @@ func PostSetup(c *gin.Context) {
 		return
 	}
 
+	configuredToken := strings.TrimSpace(os.Getenv("SETUP_TOKEN"))
+	providedToken := strings.TrimSpace(req.SetupToken)
+	if headerToken := strings.TrimSpace(c.GetHeader("X-Setup-Token")); headerToken != "" {
+		providedToken = headerToken
+	}
+	if !setupRequestAuthorized(c.ClientIP(), configuredToken, providedToken) {
+		c.JSON(http.StatusForbidden, gin.H{
+			"success": false,
+			"message": "初始化请求未通过安全校验；远程初始化必须配置并提供 SETUP_TOKEN",
+		})
+		return
+	}
+
 	// If root doesn't exist, validate and create admin account
 	if !rootExists {
-		// Validate username length: max 12 characters to align with model.User validation
-		if len(req.Username) > 12 {
+		// Keep setup validation aligned with the model username limit.
+		if strings.TrimSpace(req.Username) == "" || len(req.Username) > model.UserNameMaxLength {
 			c.JSON(200, gin.H{
 				"success": false,
-				"message": "用户名长度不能超过12个字符",
+				"message": "用户名不能为空且长度不能超过20个字符",
 			})
 			return
 		}
@@ -102,7 +129,7 @@ func PostSetup(c *gin.Context) {
 			})
 			return
 		}
-		rootUser := model.User{
+		rootUser := &model.User{
 			Username:    req.Username,
 			Password:    hashedPassword,
 			Role:        common.RoleRootUser,
@@ -111,59 +138,40 @@ func PostSetup(c *gin.Context) {
 			AccessToken: nil,
 			Quota:       100000000,
 		}
-		err = model.DB.Create(&rootUser).Error
-		if err != nil {
-			c.JSON(200, gin.H{
-				"success": false,
-				"message": "创建管理员账号失败: " + err.Error(),
-			})
-			return
-		}
+		root = rootUser
 	}
-
-	// Set operation modes
-	operation_setting.SelfUseModeEnabled = req.SelfUseModeEnabled
-	operation_setting.DemoSiteEnabled = req.DemoSiteEnabled
-
-	// Save operation modes to database for persistence
-	err = model.UpdateOption("SelfUseModeEnabled", boolToString(req.SelfUseModeEnabled))
-	if err != nil {
-		c.JSON(200, gin.H{
-			"success": false,
-			"message": "保存自用模式设置失败: " + err.Error(),
-		})
-		return
-	}
-
-	err = model.UpdateOption("DemoSiteEnabled", boolToString(req.DemoSiteEnabled))
-	if err != nil {
-		c.JSON(200, gin.H{
-			"success": false,
-			"message": "保存演示站点模式设置失败: " + err.Error(),
-		})
-		return
-	}
-
-	// Update setup status
-	constant.Setup = true
 
 	setup := model.Setup{
 		Version:       common.Version,
 		InitializedAt: time.Now().Unix(),
 	}
-	err = model.DB.Create(&setup).Error
+	err = model.InitializeSystem(setup, root, map[string]string{
+		"SelfUseModeEnabled": boolToString(req.SelfUseModeEnabled),
+		"DemoSiteEnabled":    boolToString(req.DemoSiteEnabled),
+	})
 	if err != nil {
-		c.JSON(200, gin.H{
+		common.SysLog("system initialization failed: " + err.Error())
+		c.JSON(http.StatusConflict, gin.H{
 			"success": false,
-			"message": "系统初始化失败: " + err.Error(),
+			"message": "系统初始化失败，可能已由其他请求完成，请刷新后重试",
 		})
 		return
 	}
+
+	constant.Setup = true
 
 	c.JSON(200, gin.H{
 		"success": true,
 		"message": "系统初始化成功",
 	})
+}
+
+func setupRequestAuthorized(clientIP, configuredToken, providedToken string) bool {
+	if configuredToken != "" {
+		return subtle.ConstantTimeCompare([]byte(configuredToken), []byte(providedToken)) == 1
+	}
+	parsedIP := net.ParseIP(clientIP)
+	return parsedIP != nil && (parsedIP.IsLoopback() || parsedIP.IsPrivate())
 }
 
 func boolToString(b bool) string {

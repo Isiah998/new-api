@@ -70,6 +70,7 @@ const DEFAULT_FORM_VALUES: SetupFormValues = {
   username: '',
   password: '',
   confirmPassword: '',
+  setupToken: '',
   usageMode: 'external',
 }
 
@@ -195,6 +196,7 @@ export function SetupWizard() {
         <AdminStep
           form={form}
           rootInitialized={Boolean(setupStatus?.root_init)}
+          setupTokenRequired={Boolean(setupStatus?.setup_token_required)}
         />
       )
     }
@@ -205,6 +207,18 @@ export function SetupWizard() {
   }, [currentStep, setupStatus, form, watchedValues])
 
   const validateAdminStep = () => {
+    if (setupStatus?.setup_token_required) {
+      const setupToken = form.getValues('setupToken')?.trim()
+      if (!setupToken) {
+        form.setError('setupToken', {
+          type: 'manual',
+          message: t('A setup security token is required'),
+        })
+        toast.error(t('A setup security token is required'))
+        return false
+      }
+    }
+
     if (setupStatus?.root_init) return true
 
     const username = form.getValues('username')?.trim()
@@ -278,6 +292,24 @@ export function SetupWizard() {
     mutation.mutate(payload)
   }
 
+  let setupStatusContent = (
+    <Form {...form}>
+      <form className='space-y-6' onSubmit={(event) => event.preventDefault()}>
+        {currentStepComponent}
+      </form>
+    </Form>
+  )
+  if (isLoading) {
+    setupStatusContent = <LoadingState message={t('Loading setup status…')} />
+  } else if (isError) {
+    setupStatusContent = (
+      <ErrorState
+        title={t('We could not load the setup status.')}
+        onRetry={() => refetch()}
+      />
+    )
+  }
+
   return (
     <div className='bg-muted/40 relative min-h-svh py-10'>
       <div className='absolute top-4 right-4 sm:top-6 sm:right-6'>
@@ -325,27 +357,24 @@ export function SetupWizard() {
               {STEPS.map((step, index) => {
                 const isActive = currentStep === index
                 const isCompleted = currentStep > index
+                let cardStateClass = 'border-muted bg-card'
+                if (isActive) {
+                  cardStateClass = 'border-primary ring-primary/20 ring-2'
+                } else if (isCompleted) {
+                  cardStateClass = 'border-primary/40 bg-primary/5'
+                }
                 return (
                   <li
                     key={step.titleKey}
-                    className={cn(
-                      'rounded-xl border p-3',
-                      isActive
-                        ? 'border-primary ring-primary/20 ring-2'
-                        : isCompleted
-                          ? 'border-primary/40 bg-primary/5'
-                          : 'border-muted bg-card'
-                    )}
+                    className={cn('rounded-xl border p-3', cardStateClass)}
                   >
                     <div className='flex items-start gap-3'>
                       <span
                         className={cn(
                           'flex size-6 items-center justify-center rounded-md border text-xs font-semibold',
-                          isActive
+                          isActive || isCompleted
                             ? 'border-primary bg-primary text-primary-foreground'
-                            : isCompleted
-                              ? 'border-primary bg-primary text-primary-foreground'
-                              : 'border-muted-foreground/40 text-muted-foreground'
+                            : 'border-muted-foreground/40 text-muted-foreground'
                         )}
                       >
                         {index + 1}
@@ -364,23 +393,7 @@ export function SetupWizard() {
               })}
             </ol>
 
-            {isLoading ? (
-              <LoadingState message={t('Loading setup status…')} />
-            ) : isError ? (
-              <ErrorState
-                title={t('We could not load the setup status.')}
-                onRetry={() => refetch()}
-              />
-            ) : (
-              <Form {...form}>
-                <form
-                  className='space-y-6'
-                  onSubmit={(event) => event.preventDefault()}
-                >
-                  {currentStepComponent}
-                </form>
-              </Form>
-            )}
+            {setupStatusContent}
           </CardContent>
 
           {!isLoading && !isError && (

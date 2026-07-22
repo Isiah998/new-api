@@ -1254,21 +1254,50 @@ func increaseUserQuota(id int, quota int) (err error) {
 	return err
 }
 
-func DecreaseUserQuota(id int, quota int, db bool) (err error) {
+func DecreaseUserQuota(id int, quota int, _ bool) error {
 	if quota < 0 {
 		return errors.New("quota 不能为负数！")
 	}
+	if err := decreaseUserQuota(id, quota); err != nil {
+		return err
+	}
 	gopool.Go(func() {
-		err := cacheDecrUserQuota(id, int64(quota))
-		if err != nil {
+		if err := cacheDecrUserQuota(id, int64(quota)); err != nil {
 			common.SysLog("failed to decrease user quota: " + err.Error())
 		}
 	})
-	if !db && common.BatchUpdateEnabled {
-		addNewRecord(BatchUpdateTypeUserQuota, id, -quota)
+	return nil
+}
+
+// ReserveUserQuota atomically reserves wallet quota without allowing the
+// database balance to cross below zero. Reservations deliberately bypass the
+// batch updater because the database is the authority for concurrent requests.
+func ReserveUserQuota(id int, quota int) error {
+	if quota < 0 {
+		return errors.New("quota 不能为负数！")
+	}
+	if quota == 0 {
 		return nil
 	}
-	return decreaseUserQuota(id, quota)
+
+	result := DB.Model(&User{}).
+		Where("id = ? AND quota >= ?", id, quota).
+		Update("quota", gorm.Expr("quota - ?", quota))
+	if result.Error != nil {
+		return result.Error
+	}
+	if result.RowsAffected != 1 {
+		return ErrInsufficientQuota
+	}
+
+	if common.RedisEnabled {
+		gopool.Go(func() {
+			if err := cacheDecrUserQuota(id, int64(quota)); err != nil {
+				common.SysLog("failed to decrease user quota cache after reservation: " + err.Error())
+			}
+		})
+	}
+	return nil
 }
 
 func decreaseUserQuota(id int, quota int) (err error) {

@@ -413,19 +413,52 @@ func DecreaseTokenQuota(id int, key string, quota int) (err error) {
 	if quota < 0 {
 		return errors.New("quota 不能为负数！")
 	}
+	if err := decreaseTokenQuota(id, quota); err != nil {
+		return err
+	}
 	if common.RedisEnabled {
 		gopool.Go(func() {
-			err := cacheDecrTokenQuota(key, int64(quota))
-			if err != nil {
+			if err := cacheDecrTokenQuota(key, int64(quota)); err != nil {
 				common.SysLog("failed to decrease token quota: " + err.Error())
 			}
 		})
 	}
-	if common.BatchUpdateEnabled {
-		addNewRecord(BatchUpdateTypeTokenQuota, id, -quota)
+	return nil
+}
+
+// ReserveTokenQuota atomically reserves limited-token quota without allowing
+// concurrent requests to overdraw the token. It bypasses deferred batch writes
+// so every reservation observes the latest committed database balance.
+func ReserveTokenQuota(id int, key string, quota int) error {
+	if quota < 0 {
+		return errors.New("quota 不能为负数！")
+	}
+	if quota == 0 {
 		return nil
 	}
-	return decreaseTokenQuota(id, quota)
+
+	result := DB.Model(&Token{}).
+		Where("id = ? AND "+commonKeyCol+" = ? AND remain_quota >= ?", id, key, quota).
+		Updates(map[string]interface{}{
+			"remain_quota":  gorm.Expr("remain_quota - ?", quota),
+			"used_quota":    gorm.Expr("used_quota + ?", quota),
+			"accessed_time": common.GetTimestamp(),
+		})
+	if result.Error != nil {
+		return result.Error
+	}
+	if result.RowsAffected != 1 {
+		return ErrInsufficientQuota
+	}
+
+	if common.RedisEnabled {
+		gopool.Go(func() {
+			if err := cacheDecrTokenQuota(key, int64(quota)); err != nil {
+				common.SysLog("failed to decrease token quota cache after reservation: " + err.Error())
+			}
+		})
+	}
+	return nil
 }
 
 func decreaseTokenQuota(id int, quota int) (err error) {

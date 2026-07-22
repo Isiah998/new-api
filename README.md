@@ -300,6 +300,7 @@ docker run --name qing-api -d --restart always \
 
 | Variable Name | Description | Default Value |
 |--------|------|--------|
+| `SETUP_TOKEN` | High-entropy secret required by the setup wizard when first-time initialization is performed from a public network | - |
 | `SESSION_SECRET` | Authentication signing secret; must be identical on every node | - |
 | `SESSION_COOKIE_SECURE` | `false`/unset disables the refresh/logout OriginGuard for local HTTP dev proxies; `true` enables the Secure cookie and strict Origin checks | `false` |
 | `SESSION_COOKIE_TRUSTED_URL` | Required with Secure mode: comma-separated exact HTTPS Origins allowed to call refresh/logout; not a relay CORS allowlist | - |

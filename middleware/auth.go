@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"net/http"
+	"net/url"
 	"strings"
 
 	"github.com/Isiah998/new-api/common"
@@ -104,6 +105,22 @@ func AdminAuth() func(c *gin.Context) {
 func RootAuth() func(c *gin.Context) {
 	return func(c *gin.Context) {
 		authHelper(c, common.RoleRootUser)
+	}
+}
+
+// BrowserSessionRequired prevents long-lived personal access tokens from
+// invoking endpoints that disclose or rotate credentials.
+func BrowserSessionRequired() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		if _, ok := GetSessionAuthIdentity(c); !ok {
+			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{
+				"success": false,
+				"code":    "AUTH_SESSION_REQUIRED",
+				"message": "该操作需要有效的浏览器登录会话",
+			})
+			return
+		}
+		c.Next()
 	}
 }
 
@@ -377,9 +394,10 @@ func TokenAuth() func(c *gin.Context) {
 		if strings.HasPrefix(c.Request.URL.Path, "/v1beta/models") ||
 			strings.HasPrefix(c.Request.URL.Path, "/v1beta/openai/models") ||
 			strings.HasPrefix(c.Request.URL.Path, "/v1/models/") {
-			skKey := c.Query("key")
+			skKey := c.Request.URL.Query().Get("key")
 			if skKey != "" {
 				c.Request.Header.Set("Authorization", "Bearer "+skKey)
+				removeQueryCredential(c.Request.URL, "key")
 			}
 			// 从x-goog-api-key header中获取key
 			xGoogKey := c.Request.Header.Get("x-goog-api-key")
@@ -480,6 +498,15 @@ func TokenAuth() func(c *gin.Context) {
 		}
 		c.Next()
 	}
+}
+
+func removeQueryCredential(requestURL *url.URL, name string) {
+	if requestURL == nil || name == "" {
+		return
+	}
+	query := requestURL.Query()
+	query.Del(name)
+	requestURL.RawQuery = query.Encode()
 }
 
 func SetupContextForToken(c *gin.Context, token *model.Token, parts ...string) error {

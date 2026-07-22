@@ -22,6 +22,7 @@ export interface SetupStatus {
   status: boolean
   root_init: boolean
   database_type: string
+  setup_token_required: boolean
   // Some backends also echo mode flags; they are optional here.
   SelfUseModeEnabled?: boolean
   DemoSiteEnabled?: boolean
@@ -31,6 +32,7 @@ export interface SetupFormValues {
   username: string
   password: string
   confirmPassword: string
+  setupToken: string
   usageMode: SetupUsageMode
 }
 

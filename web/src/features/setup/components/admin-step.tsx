@@ -36,90 +36,116 @@ import type { SetupFormValues } from '../types'
 interface AdminStepProps {
   form: UseFormReturn<SetupFormValues>
   rootInitialized?: boolean
+  setupTokenRequired?: boolean
 }
 
-export function AdminStep({ form, rootInitialized }: AdminStepProps) {
+export function AdminStep(props: AdminStepProps) {
   const { t } = useTranslation()
-  if (rootInitialized) {
-    return (
-      <Alert className='border-sky-200 bg-sky-50 dark:border-sky-900/60 dark:bg-sky-950/40'>
-        <AlertDescription className='flex items-start gap-2'>
-          <ShieldCheck className='mt-0.5 size-4 text-sky-500' />
-          {t(
-            'The administrator account is already initialized. You can keep your existing credentials and continue to the next step.'
-          )}
-        </AlertDescription>
-      </Alert>
-    )
-  }
 
   return (
-    <div className='grid gap-4 sm:grid-cols-2'>
-      <FormField
-        control={form.control}
-        name='username'
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>{t('Administrator username')}</FormLabel>
-            <FormControl>
-              <Input
-                {...field}
-                placeholder={t('Choose a username')}
-                autoComplete='username'
-                onChange={(event) => {
-                  form.clearErrors('username')
-                  field.onChange(event)
-                }}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+    <div className='space-y-4'>
+      {props.setupTokenRequired ? (
+        <FormField
+          control={props.form.control}
+          name='setupToken'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('Setup security token')}</FormLabel>
+              <FormControl>
+                <PasswordInput
+                  {...field}
+                  placeholder={t('Enter the SETUP_TOKEN value')}
+                  autoComplete='off'
+                  onChange={(event) => {
+                    props.form.clearErrors('setupToken')
+                    field.onChange(event)
+                  }}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      ) : null}
 
-      <FormField
-        control={form.control}
-        name='password'
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>{t('Password')}</FormLabel>
-            <FormControl>
-              <PasswordInput
-                {...field}
-                placeholder={t('Set a secure password (min. 8 characters)')}
-                autoComplete='new-password'
-                onChange={(event) => {
-                  form.clearErrors('password')
-                  field.onChange(event)
-                }}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+      {props.rootInitialized ? (
+        <Alert className='border-sky-200 bg-sky-50 dark:border-sky-900/60 dark:bg-sky-950/40'>
+          <AlertDescription className='flex items-start gap-2'>
+            <ShieldCheck className='mt-0.5 size-4 text-sky-500' />
+            {t(
+              'The administrator account is already initialized. You can keep your existing credentials and continue to the next step.'
+            )}
+          </AlertDescription>
+        </Alert>
+      ) : (
+        <div className='grid gap-4 sm:grid-cols-2'>
+          <FormField
+            control={props.form.control}
+            name='username'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t('Administrator username')}</FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    placeholder={t('Choose a username')}
+                    autoComplete='username'
+                    onChange={(event) => {
+                      props.form.clearErrors('username')
+                      field.onChange(event)
+                    }}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-      <FormField
-        control={form.control}
-        name='confirmPassword'
-        render={({ field }) => (
-          <FormItem className='sm:col-span-2'>
-            <FormLabel>{t('Confirm password')}</FormLabel>
-            <FormControl>
-              <PasswordInput
-                {...field}
-                placeholder={t('Repeat the administrator password')}
-                autoComplete='new-password'
-                onChange={(event) => {
-                  form.clearErrors('confirmPassword')
-                  field.onChange(event)
-                }}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+          <FormField
+            control={props.form.control}
+            name='password'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t('Password')}</FormLabel>
+                <FormControl>
+                  <PasswordInput
+                    {...field}
+                    placeholder={t('Set a secure password (min. 8 characters)')}
+                    autoComplete='new-password'
+                    onChange={(event) => {
+                      props.form.clearErrors('password')
+                      field.onChange(event)
+                    }}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={props.form.control}
+            name='confirmPassword'
+            render={({ field }) => (
+              <FormItem className='sm:col-span-2'>
+                <FormLabel>{t('Confirm password')}</FormLabel>
+                <FormControl>
+                  <PasswordInput
+                    {...field}
+                    placeholder={t('Repeat the administrator password')}
+                    autoComplete='new-password'
+                    onChange={(event) => {
+                      props.form.clearErrors('confirmPassword')
+                      field.onChange(event)
+                    }}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+      )}
     </div>
   )
 }

@@ -300,6 +300,7 @@ docker run --name qing-api -d --restart always \
 
 | 变量名 | 说明                                                           | 默认值 |
 |--------|--------------------------------------------------------------|--------|
+| `SETUP_TOKEN` | 公网首次初始化时必须在向导中提供的高熵安全令牌 | - |
 | `SESSION_SECRET` | 鉴权签名密钥；所有节点必须保持一致                                           | - |
 | `SESSION_COOKIE_SECURE` | `false`/未配置时关闭 refresh/logout OriginGuard 以兼容本地 HTTP 开发代理；`true` 时启用 Secure Cookie 和严格 Origin 校验 | `false` |
 | `SESSION_COOKIE_TRUSTED_URL` | Secure 模式必填：允许调用 refresh/logout 的精确 HTTPS Origin，多个用英文逗号分隔；不是 relay CORS 白名单 | - |

@@ -2,6 +2,7 @@ package middleware
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/Isiah998/new-api/common"
 	"github.com/gin-gonic/gin"
@@ -26,6 +27,7 @@ func SetUpLogger(server *gin.Engine) {
 		if tag == "" {
 			tag = "web"
 		}
+		path := requestLogPath(param.Path)
 		return fmt.Sprintf("[GIN] %s | %s | %s | %3d | %13v | %15s | %7s %s\n",
 			param.TimeStamp.Format("2006/01/02 - 15:04:05"),
 			tag,
@@ -34,7 +36,14 @@ func SetUpLogger(server *gin.Engine) {
 			param.Latency,
 			param.ClientIP,
 			param.Method,
-			param.Path,
+			path,
 		)
 	}))
+}
+
+func requestLogPath(path string) string {
+	if queryStart := strings.IndexByte(path, '?'); queryStart >= 0 {
+		return path[:queryStart]
+	}
+	return path
 }
