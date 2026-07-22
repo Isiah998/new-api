@@ -15,29 +15,29 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Calcium-Ion/qing-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Calcium-Ion/qing-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/Calcium-Ion/new-api/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Calcium-Ion/new-api?color=brightgreen" alt="license">
   </a><!--
-  --><a href="https://github.com/Calcium-Ion/qing-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Calcium-Ion/qing-api?color=brightgreen&include_prereleases" alt="release">
+  --><a href="https://github.com/Calcium-Ion/new-api/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Calcium-Ion/new-api?color=brightgreen&include_prereleases" alt="release">
   </a><!--
-  --><a href="https://hub.docker.com/r/CalciumIon/qing-api">
+  --><a href="https://hub.docker.com/r/CalciumIon/new-api">
     <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
   </a><!--
-  --><a href="https://goreportcard.com/report/github.com/Calcium-Ion/qing-api">
-    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/qing-api" alt="GoReportCard">
+  --><a href="https://goreportcard.com/report/github.com/Calcium-Ion/new-api">
+    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/new-api" alt="GoReportCard">
   </a>
 </p>
 
 <p align="center">
   <a href="https://trendshift.io/repositories/20180" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QingFlow%2Fqing-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QuantumNous%2Fnew-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
   </a>
   <br>
-  <a href="https://hellogithub.com/repository/QingFlow/qing-api" target="_blank">
+  <a href="https://hellogithub.com/repository/QuantumNous/new-api" target="_blank">
     <img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=539ac4217e69431684ad4a0bab768811&claim_uid=tbFPfKIDHpc4TzR" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" />
   </a><!--
-  --><a href="https://www.producthunt.com/products/qing-api/launches/qing-api?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-qing-api" target="_blank" rel="noopener noreferrer">
+  --><a href="https://www.producthunt.com/products/new-api/launches/new-api?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-new-api" target="_blank" rel="noopener noreferrer">
     <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="Qing API - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
   </a>
 </p>
@@ -94,13 +94,13 @@
 ## 🙏 Special Thanks
 
 <p align="center">
-  <a href="https://www.jetbrains.com/?from=qing-api" target="_blank">
+  <a href="https://www.jetbrains.com/?from=new-api" target="_blank">
     <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" width="120" />
   </a>
 </p>
 
 <p align="center">
-  <strong>Thanks to <a href="https://www.jetbrains.com/?from=qing-api">JetBrains</a> for providing free open-source development license for this project</strong>
+  <strong>Thanks to <a href="https://www.jetbrains.com/?from=new-api">JetBrains</a> for providing free open-source development license for this project</strong>
 </p>
 
 ---
@@ -111,7 +111,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/QingFlow/qing-api.git
+git clone https://github.com/QuantumNous/new-api.git
 cd qing-api
 
 # Edit docker-compose.yml configuration
@@ -163,7 +163,7 @@ docker run --name qing-api -d --restart always \
 
 <div align="center">
 
-### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QingFlow/qing-api)
+### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/new-api)
 
 </div>
 
@@ -206,7 +206,7 @@ docker run --name qing-api -d --restart always \
 - 🤖 LinuxDO authorization login
 - 📱 Telegram authorization login
 - 🔑 OIDC unified authentication
-- 🔍 Key quota query usage (with [qing-api-key-tool](https://github.com/Calcium-Ion/qing-api-key-tool))
+- 🔍 Key quota query usage (with [new-api-key-tool](https://github.com/Calcium-Ion/new-api-key-tool))
 
 ### 🚀 Advanced Features
 
@@ -350,7 +350,7 @@ docker run --name qing-api -d --restart always \
 
 ```bash
 # Clone the project
-git clone https://github.com/QingFlow/qing-api.git
+git clone https://github.com/QuantumNous/new-api.git
 cd qing-api
 
 # Edit configuration
@@ -442,8 +442,8 @@ See [User authentication and login sessions](./docs/authentication.md) for the t
 
 | Project | Description |
 |------|------|
-| [qing-api-key-tool](https://github.com/Calcium-Ion/qing-api-key-tool) | Key quota query tool |
-| [qing-api-horizon](https://github.com/Calcium-Ion/qing-api-horizon) | Qing API high-performance optimized version |
+| [new-api-key-tool](https://github.com/Calcium-Ion/new-api-key-tool) | Key quota query tool |
+| [new-api-horizon](https://github.com/Calcium-Ion/new-api-horizon) | Qing API high-performance optimized version |
 
 ---
 
@@ -479,7 +479,7 @@ contributors.` in the appropriate legal notices and in any prominent about,
 legal, footer, or attribution location presented by the user interface.
 
 Modified versions that present a user interface must also preserve a visible
-link to the original project: <https://github.com/QingFlow/qing-api>.
+link to the original project: <https://github.com/QuantumNous/new-api>.
 
 This is an open-source project developed based on [One API](https://github.com/songquanpeng/one-api) (MIT License).
 
@@ -491,7 +491,7 @@ If your organization's policies do not permit the use of AGPLv3-licensed softwar
 
 <div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/qing-api&type=Date)](https://star-history.com/#Calcium-Ion/qing-api&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/new-api&type=Date)](https://star-history.com/#Calcium-Ion/new-api&Date)
 
 </div>
 
@@ -503,7 +503,7 @@ If your organization's policies do not permit the use of AGPLv3-licensed softwar
 
 If this project is helpful to you, welcome to give us a ⭐️ Star！
 
-**[Official Documentation](https://docs.newapi.pro/en/docs)** • **[Issue Feedback](https://github.com/Calcium-Ion/qing-api/issues)** • **[Latest Release](https://github.com/Calcium-Ion/qing-api/releases)**
+**[Official Documentation](https://docs.newapi.pro/en/docs)** • **[Issue Feedback](https://github.com/Calcium-Ion/new-api/issues)** • **[Latest Release](https://github.com/Calcium-Ion/new-api/releases)**
 
 <sub>Built with ❤️ by QingFlow</sub>
 
